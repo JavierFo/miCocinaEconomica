@@ -1,24 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="goR-9U-gEg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Recetario-->
+        <scene sceneID="t6z-9M-Zwd">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="lCw-Qv-U6d" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1om-Fl-pNp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="1LJ-Dn-57X"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Recetario" image="menus46" id="OZB-Wo-OQv"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tUn-85-iyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-497" y="611"/>
+        </scene>
+        <!--Mi Despensa-->
+        <scene sceneID="GD5-4l-ulA">
+            <objects>
+                <viewController id="elw-lg-xtr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xa-gQ-UAB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="HkX-8H-vOi"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mi Despensa" image="Refrigerator46" id="dxQ-Ud-LSa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PlA-3b-5hB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1317" y="611"/>
+        </scene>
+        <!--Mis Platillos-->
+        <scene sceneID="9Oc-Bx-pl4">
+            <objects>
+                <viewController id="C1b-Kt-XzV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KA2-az-FZG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Lqe-cc-wua"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Mis Platillos" image="Book46" id="cdU-vQ-XMy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y4W-fO-8Go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="309" y="611"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="hOh-Nc-mhW">
+            <objects>
+                <tabBarController id="goR-9U-gEg" customClass="TabBarController" customModule="miCocinaEconomica" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gdZ-VX-QEQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="defaultIndex">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="elw-lg-xtr" kind="relationship" relationship="viewControllers" id="Hf9-t5-LnW"/>
+                        <segue destination="lCw-Qv-U6d" kind="relationship" relationship="viewControllers" id="h9u-Wj-pfa"/>
+                        <segue destination="C1b-Kt-XzV" kind="relationship" relationship="viewControllers" id="P7M-dI-SGf"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eNb-bm-V7z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-497" y="-103"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Book46" width="46" height="34"/>
+        <image name="Refrigerator46" width="46" height="34"/>
+        <image name="menus46" width="46" height="46"/>
+    </resources>
 </document>
