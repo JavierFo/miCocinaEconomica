@@ -15,6 +15,13 @@
 		100FFC6323F90A0F00ABB1FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 100FFC6123F90A0F00ABB1FF /* LaunchScreen.storyboard */; };
 		100FFC6E23F90A0F00ABB1FF /* miCocinaEconomicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC6D23F90A0F00ABB1FF /* miCocinaEconomicaTests.swift */; };
 		100FFC7923F90A1000ABB1FF /* miCocinaEconomicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */; };
+		10C6D9F423FC193600F8778A /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */; };
+		10C6D9F523FC193600F8778A /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */; };
+		10C6D9F623FC193700F8778A /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */; };
+		10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F723FC1A5200F8778A /* IngredientsTableViewController.swift */; };
+		10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */; };
+		10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */; };
+		10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		100FFC7423F90A1000ABB1FF /* miCocinaEconomicaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miCocinaEconomicaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miCocinaEconomicaUITests.swift; sourceTree = "<group>"; };
 		100FFC7A23F90A1000ABB1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
+		10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
+		10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
+		10C6D9F723FC1A5200F8778A /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
+		10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
+		10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,7 @@
 		100FFC5523F90A0F00ABB1FF /* miCocinaEconomica */ = {
 			isa = PBXGroup;
 			children = (
+				10C6D9EF23FC190B00F8778A /* Utils */,
 				10C6D9EE23FB6BA900F8778A /* Network */,
 				10C6D9ED23FB67F200F8778A /* Views */,
 				10C6D9EC23FB67EA00F8778A /* Controllers */,
@@ -140,6 +155,10 @@
 			isa = PBXGroup;
 			children = (
 				100FFC5A23F90A0F00ABB1FF /* TabBarController.swift */,
+				10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */,
+				10C6D9F723FC1A5200F8778A /* IngredientsTableViewController.swift */,
+				10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */,
+				10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +177,25 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		10C6D9EF23FC190B00F8778A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				10C6D9F023FC193600F8778A /* Presentation */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		10C6D9F023FC193600F8778A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */,
+				10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */,
+				10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */,
+			);
+			name = Presentation;
+			path = "../../../../../Downloads/Materials/MedalCount Completed/MedalCount/Presentation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,8 +329,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10C6D9F523FC193600F8778A /* SlideInPresentationManager.swift in Sources */,
+				10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */,
+				10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */,
 				100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */,
+				10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */,
+				10C6D9F423FC193600F8778A /* SlideInPresentationAnimator.swift in Sources */,
 				100FFC5723F90A0F00ABB1FF /* AppDelegate.swift in Sources */,
+				10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */,
+				10C6D9F623FC193700F8778A /* SlideInPresentationController.swift in Sources */,
 				100FFC5923F90A0F00ABB1FF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
