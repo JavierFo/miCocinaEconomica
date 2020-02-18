@@ -99,12 +99,13 @@
 		100FFC5523F90A0F00ABB1FF /* miCocinaEconomica */ = {
 			isa = PBXGroup;
 			children = (
+				10C6D9EE23FB6BA900F8778A /* Network */,
+				10C6D9ED23FB67F200F8778A /* Views */,
+				10C6D9EC23FB67EA00F8778A /* Controllers */,
+				10C6D9EB23FB67DE00F8778A /* Models */,
 				100FFC5623F90A0F00ABB1FF /* AppDelegate.swift */,
 				100FFC5823F90A0F00ABB1FF /* SceneDelegate.swift */,
-				100FFC5A23F90A0F00ABB1FF /* TabBarController.swift */,
-				100FFC5C23F90A0F00ABB1FF /* Main.storyboard */,
 				100FFC5F23F90A0F00ABB1FF /* Assets.xcassets */,
-				100FFC6123F90A0F00ABB1FF /* LaunchScreen.storyboard */,
 				100FFC6423F90A0F00ABB1FF /* Info.plist */,
 			);
 			path = miCocinaEconomica;
@@ -126,6 +127,37 @@
 				100FFC7A23F90A1000ABB1FF /* Info.plist */,
 			);
 			path = miCocinaEconomicaUITests;
+			sourceTree = "<group>";
+		};
+		10C6D9EB23FB67DE00F8778A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		10C6D9EC23FB67EA00F8778A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				100FFC5A23F90A0F00ABB1FF /* TabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		10C6D9ED23FB67F200F8778A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				100FFC5C23F90A0F00ABB1FF /* Main.storyboard */,
+				100FFC6123F90A0F00ABB1FF /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		10C6D9EE23FB6BA900F8778A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
