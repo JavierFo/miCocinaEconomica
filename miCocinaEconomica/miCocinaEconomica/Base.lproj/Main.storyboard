@@ -11,7 +11,7 @@
         <!--Menú Del Día-->
         <scene sceneID="t6z-9M-Zwd">
             <objects>
-                <viewController id="lCw-Qv-U6d" sceneMemberID="viewController">
+                <viewController id="lCw-Qv-U6d" customClass="MainMenuViewController" customModule="miCocinaEconomica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1om-Fl-pNp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -19,7 +19,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-9z-MzX">
                                 <rect key="frame" x="20" y="144" width="374" height="268.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menú Del Día" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0U-4d-95U">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menú Del Día." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0U-4d-95U">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="23"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -36,7 +36,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jgR-Si-qUb">
                                 <rect key="frame" x="20" y="463" width="374" height="150"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De nuestra Cocina" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuG-Oq-YNy">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De nuestra Cocina:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GuG-Oq-YNy">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -52,7 +52,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="IPt-AH-PFN">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellMenus" id="IPt-AH-PFN">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5S8-5g-iE5">
@@ -61,6 +61,10 @@
                                                 </collectionViewCellContentView>
                                             </collectionViewCell>
                                         </cells>
+                                        <connections>
+                                            <outlet property="dataSource" destination="lCw-Qv-U6d" id="78K-hs-UrT"/>
+                                            <outlet property="delegate" destination="lCw-Qv-U6d" id="2k2-oS-yIe"/>
+                                        </connections>
                                     </collectionView>
                                 </subviews>
                                 <constraints>
@@ -68,35 +72,45 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="j8S-i1-WT8"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mi Cocina Económica" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epP-bQ-rKD">
-                                <rect key="frame" x="125" y="44" width="164" height="55"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
-                                <nil key="textColor"/>
-                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="jgR-Si-qUb" firstAttribute="leading" secondItem="1LJ-Dn-57X" secondAttribute="leading" constant="20" id="5Fm-pI-R5h"/>
-                            <constraint firstItem="epP-bQ-rKD" firstAttribute="top" secondItem="1LJ-Dn-57X" secondAttribute="top" id="9FH-i7-5U2"/>
                             <constraint firstItem="ECh-9z-MzX" firstAttribute="leading" secondItem="1LJ-Dn-57X" secondAttribute="leading" constant="20" id="9fD-Mz-EqR"/>
                             <constraint firstItem="1LJ-Dn-57X" firstAttribute="trailing" secondItem="jgR-Si-qUb" secondAttribute="trailing" constant="20" id="OHh-3Y-yeI"/>
                             <constraint firstItem="1LJ-Dn-57X" firstAttribute="trailing" secondItem="ECh-9z-MzX" secondAttribute="trailing" constant="20" id="Q4N-C1-qFl"/>
                             <constraint firstItem="ECh-9z-MzX" firstAttribute="top" secondItem="1LJ-Dn-57X" secondAttribute="top" constant="100" id="bkb-UT-LqY"/>
                             <constraint firstItem="jgR-Si-qUb" firstAttribute="top" secondItem="ECh-9z-MzX" secondAttribute="bottom" constant="50.5" id="gjP-ve-NyG"/>
                             <constraint firstItem="1LJ-Dn-57X" firstAttribute="trailing" secondItem="jgR-Si-qUb" secondAttribute="trailing" constant="20" id="oPq-ZC-AaT"/>
-                            <constraint firstItem="ECh-9z-MzX" firstAttribute="top" secondItem="epP-bQ-rKD" secondAttribute="bottom" constant="45" id="q3g-Tu-YS8"/>
-                            <constraint firstItem="epP-bQ-rKD" firstAttribute="leading" secondItem="1LJ-Dn-57X" secondAttribute="leading" constant="125" id="sgG-3C-blG"/>
                             <constraint firstItem="jgR-Si-qUb" firstAttribute="leading" secondItem="1LJ-Dn-57X" secondAttribute="leading" constant="20" id="tN8-iY-Dhf"/>
-                            <constraint firstItem="epP-bQ-rKD" firstAttribute="centerX" secondItem="ECh-9z-MzX" secondAttribute="centerX" id="ute-W7-pcZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1LJ-Dn-57X"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Menú Del Día" image="menus46" id="OZB-Wo-OQv"/>
+                    <navigationItem key="navigationItem" id="BN5-KH-AWr"/>
+                    <connections>
+                        <segue destination="Mws-xA-T09" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="BZ1-vh-7Kf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUn-85-iyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-497.10144927536237" y="610.71428571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="UhH-oa-45R">
+            <objects>
+                <viewController id="Mws-xA-T09" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="adw-dv-nVL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="K4x-6x-eti"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="egu-n2-btT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V8H-tS-mcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1268" y="1389"/>
         </scene>
         <!--Ingredients Table View Controller-->
         <scene sceneID="SQW-gQ-LDY">
@@ -170,7 +184,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="dMf-Kz-UjR">
-                                        <barButtonItem key="rightBarButtonItem" title="Añadir Receta" id="xbR-pg-ZfL">
+                                        <barButtonItem key="rightBarButtonItem" title="Añadir Recetas" id="xbR-pg-ZfL">
                                             <connections>
                                                 <segue destination="u7d-cc-RxG" kind="presentation" identifier="RecipesSegue" id="bTh-oN-hTU"/>
                                             </connections>

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -22,6 +22,10 @@
 		10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */; };
 		10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */; };
 		10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */; };
+		10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5647C23FCBB440028F856 /* MainMenuViewController.swift */; };
+		ABBAEE5754DEC852C7EBCFD2 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D07333D124BBCF38471A776 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework */; };
+		E9414152533AD084366F6C26 /* Pods_miCocinaEconomicaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5568C3E487100761A5C1E435 /* Pods_miCocinaEconomicaTests.framework */; };
+		F07A17DE2239C9DA81677EA9 /* Pods_miCocinaEconomica.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A92E4B5C4DA2A82CA928A8 /* Pods_miCocinaEconomica.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +67,16 @@
 		10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
+		10F5647C23FCBB440028F856 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		2D07333D124BBCF38471A776 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		436B1569AE1BED148FC21CEE /* Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig"; path = "Target Support Files/Pods-miCocinaEconomica-miCocinaEconomicaUITests/Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		489AC8BC845380BA2BE9E419 /* Pods-miCocinaEconomica.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miCocinaEconomica.release.xcconfig"; path = "Target Support Files/Pods-miCocinaEconomica/Pods-miCocinaEconomica.release.xcconfig"; sourceTree = "<group>"; };
+		5568C3E487100761A5C1E435 /* Pods_miCocinaEconomicaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miCocinaEconomicaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7467F8C08ADA73C2F2B8CCD5 /* Pods-miCocinaEconomica.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miCocinaEconomica.debug.xcconfig"; path = "Target Support Files/Pods-miCocinaEconomica/Pods-miCocinaEconomica.debug.xcconfig"; sourceTree = "<group>"; };
+		78E079A4B9179F68EFCF5B71 /* Pods-miCocinaEconomicaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miCocinaEconomicaTests.release.xcconfig"; path = "Target Support Files/Pods-miCocinaEconomicaTests/Pods-miCocinaEconomicaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A206A8EDE2A87D763D36C48A /* Pods-miCocinaEconomicaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miCocinaEconomicaTests.debug.xcconfig"; path = "Target Support Files/Pods-miCocinaEconomicaTests/Pods-miCocinaEconomicaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A9A92E4B5C4DA2A82CA928A8 /* Pods_miCocinaEconomica.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miCocinaEconomica.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4D3F571210A6F4F532AB560 /* Pods-miCocinaEconomica-miCocinaEconomicaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miCocinaEconomica-miCocinaEconomicaUITests.release.xcconfig"; path = "Target Support Files/Pods-miCocinaEconomica-miCocinaEconomicaUITests/Pods-miCocinaEconomica-miCocinaEconomicaUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F07A17DE2239C9DA81677EA9 /* Pods_miCocinaEconomica.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9414152533AD084366F6C26 /* Pods_miCocinaEconomicaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBAEE5754DEC852C7EBCFD2 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +114,8 @@
 				100FFC6C23F90A0F00ABB1FF /* miCocinaEconomicaTests */,
 				100FFC7723F90A1000ABB1FF /* miCocinaEconomicaUITests */,
 				100FFC5423F90A0F00ABB1FF /* Products */,
+				4998323885B2FCAC5FE34EBB /* Pods */,
+				9BAF442BCB75CBA1CA2D0A1D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -120,6 +139,8 @@
 				10C6D9EB23FB67DE00F8778A /* Models */,
 				100FFC5623F90A0F00ABB1FF /* AppDelegate.swift */,
 				100FFC5823F90A0F00ABB1FF /* SceneDelegate.swift */,
+				100FFC5C23F90A0F00ABB1FF /* Main.storyboard */,
+				100FFC6123F90A0F00ABB1FF /* LaunchScreen.storyboard */,
 				100FFC5F23F90A0F00ABB1FF /* Assets.xcassets */,
 				100FFC6423F90A0F00ABB1FF /* Info.plist */,
 			);
@@ -155,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				100FFC5A23F90A0F00ABB1FF /* TabBarController.swift */,
+				10F5647C23FCBB440028F856 /* MainMenuViewController.swift */,
 				10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */,
 				10C6D9F723FC1A5200F8778A /* IngredientsTableViewController.swift */,
 				10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */,
@@ -166,8 +188,6 @@
 		10C6D9ED23FB67F200F8778A /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				100FFC5C23F90A0F00ABB1FF /* Main.storyboard */,
-				100FFC6123F90A0F00ABB1FF /* LaunchScreen.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +218,29 @@
 			path = "../../../../../Downloads/Materials/MedalCount Completed/MedalCount/Presentation";
 			sourceTree = "<group>";
 		};
+		4998323885B2FCAC5FE34EBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7467F8C08ADA73C2F2B8CCD5 /* Pods-miCocinaEconomica.debug.xcconfig */,
+				489AC8BC845380BA2BE9E419 /* Pods-miCocinaEconomica.release.xcconfig */,
+				436B1569AE1BED148FC21CEE /* Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig */,
+				E4D3F571210A6F4F532AB560 /* Pods-miCocinaEconomica-miCocinaEconomicaUITests.release.xcconfig */,
+				A206A8EDE2A87D763D36C48A /* Pods-miCocinaEconomicaTests.debug.xcconfig */,
+				78E079A4B9179F68EFCF5B71 /* Pods-miCocinaEconomicaTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9BAF442BCB75CBA1CA2D0A1D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9A92E4B5C4DA2A82CA928A8 /* Pods_miCocinaEconomica.framework */,
+				2D07333D124BBCF38471A776 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework */,
+				5568C3E487100761A5C1E435 /* Pods_miCocinaEconomicaTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 100FFC7D23F90A1000ABB1FF /* Build configuration list for PBXNativeTarget "miCocinaEconomica" */;
 			buildPhases = (
+				FA681A617FFB594418A6B41D /* [CP] Check Pods Manifest.lock */,
 				100FFC4F23F90A0F00ABB1FF /* Sources */,
 				100FFC5023F90A0F00ABB1FF /* Frameworks */,
 				100FFC5123F90A0F00ABB1FF /* Resources */,
+				B336493DBB4BF5EF6D800986 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +267,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 100FFC8023F90A1000ABB1FF /* Build configuration list for PBXNativeTarget "miCocinaEconomicaTests" */;
 			buildPhases = (
+				3E1E6FA9A0EBD116E4595B3E /* [CP] Check Pods Manifest.lock */,
 				100FFC6523F90A0F00ABB1FF /* Sources */,
 				100FFC6623F90A0F00ABB1FF /* Frameworks */,
 				100FFC6723F90A0F00ABB1FF /* Resources */,
@@ -240,9 +286,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 100FFC8323F90A1000ABB1FF /* Build configuration list for PBXNativeTarget "miCocinaEconomicaUITests" */;
 			buildPhases = (
+				7030F81FC0BF2E1A995D3388 /* [CP] Check Pods Manifest.lock */,
 				100FFC7023F90A1000ABB1FF /* Sources */,
 				100FFC7123F90A1000ABB1FF /* Frameworks */,
 				100FFC7223F90A1000ABB1FF /* Resources */,
+				63EB11A43519F3E050C239EF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -324,6 +372,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E1E6FA9A0EBD116E4595B3E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-miCocinaEconomicaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		63EB11A43519F3E050C239EF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miCocinaEconomica-miCocinaEconomicaUITests/Pods-miCocinaEconomica-miCocinaEconomicaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miCocinaEconomica-miCocinaEconomicaUITests/Pods-miCocinaEconomica-miCocinaEconomicaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-miCocinaEconomica-miCocinaEconomicaUITests/Pods-miCocinaEconomica-miCocinaEconomicaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7030F81FC0BF2E1A995D3388 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-miCocinaEconomica-miCocinaEconomicaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B336493DBB4BF5EF6D800986 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miCocinaEconomica/Pods-miCocinaEconomica-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-miCocinaEconomica/Pods-miCocinaEconomica-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-miCocinaEconomica/Pods-miCocinaEconomica-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA681A617FFB594418A6B41D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-miCocinaEconomica-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		100FFC4F23F90A0F00ABB1FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -331,6 +482,7 @@
 			files = (
 				10C6D9F523FC193600F8778A /* SlideInPresentationManager.swift in Sources */,
 				10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */,
+				10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */,
 				10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */,
 				100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */,
 				10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */,
@@ -509,6 +661,7 @@
 		};
 		100FFC7E23F90A1000ABB1FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7467F8C08ADA73C2F2B8CCD5 /* Pods-miCocinaEconomica.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -526,6 +679,7 @@
 		};
 		100FFC7F23F90A1000ABB1FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 489AC8BC845380BA2BE9E419 /* Pods-miCocinaEconomica.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -543,6 +697,7 @@
 		};
 		100FFC8123F90A1000ABB1FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A206A8EDE2A87D763D36C48A /* Pods-miCocinaEconomicaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +719,7 @@
 		};
 		100FFC8223F90A1000ABB1FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78E079A4B9179F68EFCF5B71 /* Pods-miCocinaEconomicaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -585,6 +741,7 @@
 		};
 		100FFC8423F90A1000ABB1FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 436B1569AE1BED148FC21CEE /* Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -604,6 +761,7 @@
 		};
 		100FFC8523F90A1000ABB1FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4D3F571210A6F4F532AB560 /* Pods-miCocinaEconomica-miCocinaEconomicaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
