@@ -22,6 +22,7 @@
 		10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */; };
 		10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */; };
 		10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */; };
+		10C8D7F223FE3ABA00BFFB96 /* CalendarRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8D7F123FE3ABA00BFFB96 /* CalendarRecipesViewController.swift */; };
 		10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5647C23FCBB440028F856 /* MainMenuViewController.swift */; };
 		ABBAEE5754DEC852C7EBCFD2 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D07333D124BBCF38471A776 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework */; };
 		E9414152533AD084366F6C26 /* Pods_miCocinaEconomicaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5568C3E487100761A5C1E435 /* Pods_miCocinaEconomicaTests.framework */; };
@@ -67,6 +68,7 @@
 		10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
+		10C8D7F123FE3ABA00BFFB96 /* CalendarRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRecipesViewController.swift; sourceTree = "<group>"; };
 		10F5647C23FCBB440028F856 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		2D07333D124BBCF38471A776 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		436B1569AE1BED148FC21CEE /* Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig"; path = "Target Support Files/Pods-miCocinaEconomica-miCocinaEconomicaUITests/Pods-miCocinaEconomica-miCocinaEconomicaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */,
 				10C6D9F723FC1A5200F8778A /* IngredientsTableViewController.swift */,
 				10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */,
+				10C8D7F123FE3ABA00BFFB96 /* CalendarRecipesViewController.swift */,
 				10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */,
 			);
 			path = Controllers;
@@ -482,6 +485,7 @@
 			files = (
 				10C6D9F523FC193600F8778A /* SlideInPresentationManager.swift in Sources */,
 				10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */,
+				10C8D7F223FE3ABA00BFFB96 /* CalendarRecipesViewController.swift in Sources */,
 				10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */,
 				10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */,
 				100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */,

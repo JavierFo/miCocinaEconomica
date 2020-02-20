@@ -184,9 +184,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="dMf-Kz-UjR">
-                                        <barButtonItem key="rightBarButtonItem" title="Añadir Recetas" id="xbR-pg-ZfL">
+                                        <barButtonItem key="rightBarButtonItem" title="Mi Recetario Semanal " id="xbR-pg-ZfL">
                                             <connections>
-                                                <segue destination="u7d-cc-RxG" kind="presentation" identifier="RecipesSegue" id="bTh-oN-hTU"/>
+                                                <segue destination="zIJ-6g-kdJ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Kl9-aZ-GhS"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -201,6 +201,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4W-fO-8Go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="308.69565217391306" y="610.71428571428567"/>
+        </scene>
+        <!--Calendar Recipes View Controller-->
+        <scene sceneID="rWN-Dp-KeB">
+            <objects>
+                <viewController id="zIJ-6g-kdJ" customClass="CalendarRecipesViewController" customModule="miCocinaEconomica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kXL-v2-2CR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="eyl-eC-p14"/>
+                    </view>
+                    <connections>
+                        <segue destination="u7d-cc-RxG" kind="presentation" identifier="CalendarRecipesSegue" id="oUX-VZ-RhC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D7h-A1-wti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1100" y="611"/>
         </scene>
         <!--Recipes Table View Controller-->
         <scene sceneID="4PZ-QD-Ix6">
@@ -228,7 +246,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojo-zr-mU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="611"/>
+            <point key="canvasLocation" x="1896" y="611"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hOh-Nc-mhW">
