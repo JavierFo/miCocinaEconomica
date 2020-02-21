@@ -137,6 +137,4 @@ class CalendarViewController: DayViewController {
        reloadData()
      }
     
-    
-    
 }

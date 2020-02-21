@@ -11,11 +11,13 @@ import UIKit
 class TabBarController: UITabBarController {
 
     @IBInspectable var defaultIndex: Int = 0
-
+    var JSONList = MxMarketsAPISession()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = defaultIndex
         // Do any additional setup after loading the view.
+        JSONList.getAllIngredientsList()
     }
 
 

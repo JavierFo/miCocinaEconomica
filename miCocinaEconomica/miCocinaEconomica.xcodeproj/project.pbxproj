@@ -16,6 +16,7 @@
 		100FFC6E23F90A0F00ABB1FF /* miCocinaEconomicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC6D23F90A0F00ABB1FF /* miCocinaEconomicaTests.swift */; };
 		100FFC7923F90A1000ABB1FF /* miCocinaEconomicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */; };
 		108C15A823FF8DB9004891B2 /* 2605-cooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 108C15A723FF8DB9004891B2 /* 2605-cooking.json */; };
+		108C15AE23FFCB2C004891B2 /* MxMarketsAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */; };
 		10C6D9F423FC193600F8778A /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */; };
 		10C6D9F523FC193600F8778A /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */; };
 		10C6D9F623FC193700F8778A /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */; };
@@ -67,6 +68,7 @@
 		100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miCocinaEconomicaUITests.swift; sourceTree = "<group>"; };
 		100FFC7A23F90A1000ABB1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		108C15A723FF8DB9004891B2 /* 2605-cooking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "2605-cooking.json"; path = "../../../../../../Downloads/2605-cooking.json"; sourceTree = "<group>"; };
+		108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxMarketsAPISession.swift; sourceTree = "<group>"; };
 		10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
 		10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		10C6D9EE23FB6BA900F8778A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -516,6 +519,7 @@
 				10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */,
 				10C6D9F423FC193600F8778A /* SlideInPresentationAnimator.swift in Sources */,
 				100FFC5723F90A0F00ABB1FF /* AppDelegate.swift in Sources */,
+				108C15AE23FFCB2C004891B2 /* MxMarketsAPISession.swift in Sources */,
 				10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */,
 				10C6D9F623FC193700F8778A /* SlideInPresentationController.swift in Sources */,
 				100FFC5923F90A0F00ABB1FF /* SceneDelegate.swift in Sources */,
