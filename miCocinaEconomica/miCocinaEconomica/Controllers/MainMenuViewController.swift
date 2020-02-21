@@ -7,8 +7,29 @@
 //
 
 import UIKit
+import Lottie
 
 class MainMenuViewController: UIViewController {
+    
+    @IBOutlet weak var animationArea: UIView!
+    
+    let animationView = AnimationView(name: "2605-cooking")
+
+     override func viewDidLoad() {
+            super.viewDidLoad()
+            // Do any additional setup after loading the view.
+            
+        }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        animationView.frame = animationArea.frame
+        animationView.center = animationArea.center
+        animationView.contentMode = .scaleAspectFill
+        view.backgroundColor = .none
+        view.addSubview(animationView)
+        animationView.loopMode = .loop
+        animationView.play()
+    }
     
 }
  
@@ -28,6 +49,5 @@ extension MainMenuViewController: UICollectionViewDelegate, UICollectionViewData
          
          return cell
     }
-    
     
 }

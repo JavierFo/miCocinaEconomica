@@ -6,8 +6,13 @@ target 'miCocinaEconomica' do
   use_frameworks!
 
   # Pods for miCocinaEconomica
-  pod 'CalendarKit'	
 
+  pod 'CalendarKit'	
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'lottie-ios'
+  
   target 'miCocinaEconomicaTests' do
     inherit! :search_paths
     # Pods for testing
