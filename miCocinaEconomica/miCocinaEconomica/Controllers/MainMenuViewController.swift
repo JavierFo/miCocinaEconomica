@@ -12,13 +12,17 @@ import Lottie
 class MainMenuViewController: UIViewController {
     
     @IBOutlet weak var animationArea: UIView!
+    @IBOutlet weak var dayMenuImage: UIImageView!
     
     let animationView = AnimationView(name: "2605-cooking")
 
      override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
-            
+        dayMenuImage.isUserInteractionEnabled = true
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector (self.sendToMenusTableView(sender:)))
+        tapGestureRecognizer.numberOfTouchesRequired = 1
+     dayMenuImage.addGestureRecognizer(tapGestureRecognizer)
         }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,6 +33,21 @@ class MainMenuViewController: UIViewController {
         view.addSubview(animationView)
         animationView.loopMode = .loop
         animationView.play()
+    }
+    
+    @objc func sendToMenusTableView(sender:UITapGestureRecognizer){
+        performSegue(withIdentifier: "DayMenu", sender: self)
+    }
+    
+    @IBAction func unwindToMainMenu(_ unwindSegue: UIStoryboardSegue) {
+      }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+          if segue.identifier == "DayMenu" {
+           
+          }
+        
     }
     
 }

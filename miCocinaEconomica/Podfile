@@ -11,6 +11,7 @@ target 'miCocinaEconomica' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'Firebase/Database'
   pod 'lottie-ios'
   
   target 'miCocinaEconomicaTests' do

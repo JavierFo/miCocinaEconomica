@@ -17,7 +17,13 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
         selectedIndex = defaultIndex
         // Do any additional setup after loading the view.
-        JSONList.getAllIngredientsList()
+        JSONList.getAllIngredientsList{ (IngredientsList) in
+                //print(IngredientsList)
+        }
+        
+        JSONList.getDetailedIngredientInfo(withID: 201) { (IngredientDetails) in
+            //print(IngredientDetails)
+        }
     }
 
 

@@ -31,7 +31,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="e4d-oq-KU5">
                                         <rect key="frame" x="20" y="91" width="374" height="268.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menú Del Día." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIF-t5-Okz">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Platillo Del Día." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIF-t5-Okz">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="23"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                                 <nil key="textColor"/>
@@ -115,8 +115,9 @@
                     <tabBarItem key="tabBarItem" title="Menú Del Día" image="menus46" id="OZB-Wo-OQv"/>
                     <connections>
                         <outlet property="animationArea" destination="Ug7-gQ-E6s" id="uP7-Yl-065"/>
+                        <outlet property="dayMenuImage" destination="OXD-x8-Vje" id="dTP-ZW-qr5"/>
                         <segue destination="Mws-xA-T09" kind="presentation" modalPresentationStyle="fullScreen" id="BZ1-vh-7Kf"/>
-                        <segue destination="eeP-Iy-fIE" kind="presentation" modalPresentationStyle="fullScreen" id="hVd-Rx-fuE"/>
+                        <segue destination="eeP-Iy-fIE" kind="presentation" identifier="DayMenu" modalPresentationStyle="fullScreen" id="hVd-Rx-fuE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tUn-85-iyE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -191,21 +192,6 @@
             </objects>
             <point key="canvasLocation" x="-488" y="2101"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Vtx-ep-TW5">
-            <objects>
-                <viewController id="hZH-L5-BKY" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wAh-Ww-oux">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="Dot-Ub-GO4"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1fI-6E-NAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="300" y="2101"/>
-        </scene>
         <!--Ingredients Table View Controller-->
         <scene sceneID="SQW-gQ-LDY">
             <objects>
@@ -242,9 +228,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-z2-DW9">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hB9-z2-DW9">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="rTx-tD-dlT">
                                         <barButtonItem key="leftBarButtonItem" title="Añadir Ingredientes" id="nxA-0o-74W">
@@ -256,7 +241,12 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hB9-z2-DW9" firstAttribute="centerX" secondItem="7xa-gQ-UAB" secondAttribute="centerX" id="GbO-81-VLO"/>
+                            <constraint firstItem="hB9-z2-DW9" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" id="bLs-dW-4UZ"/>
+                            <constraint firstItem="hB9-z2-DW9" firstAttribute="top" secondItem="HkX-8H-vOi" secondAttribute="top" id="plW-zd-QpP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="HkX-8H-vOi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mi Despensa" image="Refrigerator46" id="dxQ-Ud-LSa"/>
@@ -273,9 +263,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-F9-hSV">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-F9-hSV">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="dMf-Kz-UjR">
                                         <barButtonItem key="rightBarButtonItem" title="Mi Recetario Semanal " id="xbR-pg-ZfL">
@@ -287,7 +276,12 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Iau-F9-hSV" firstAttribute="leading" secondItem="Lqe-cc-wua" secondAttribute="leading" id="PAT-0J-BHB"/>
+                            <constraint firstItem="Iau-F9-hSV" firstAttribute="top" secondItem="Lqe-cc-wua" secondAttribute="top" id="Vsz-4A-y1I"/>
+                            <constraint firstItem="Iau-F9-hSV" firstAttribute="centerX" secondItem="KA2-az-FZG" secondAttribute="centerX" id="i6V-88-fNa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Lqe-cc-wua"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mi Recetario " image="Book46" id="cdU-vQ-XMy"/>
@@ -322,7 +316,7 @@
                                 </items>
                             </navigationBar>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRY-w5-H8p">
-                                <rect key="frame" x="0.0" y="88" width="414" height="400"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="420"/>
                                 <connections>
                                     <segue destination="n42-81-y1V" kind="embed" id="utX-2G-9M2"/>
                                 </connections>
@@ -330,7 +324,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="eyl-eC-p14" firstAttribute="bottom" secondItem="CRY-w5-H8p" secondAttribute="bottom" constant="374" id="325-cD-i0Y"/>
+                            <constraint firstItem="eyl-eC-p14" firstAttribute="bottom" secondItem="CRY-w5-H8p" secondAttribute="bottom" constant="354" id="325-cD-i0Y"/>
                             <constraint firstItem="mm1-1F-R6U" firstAttribute="leading" secondItem="CRY-w5-H8p" secondAttribute="leading" id="7to-os-TnW"/>
                             <constraint firstItem="CRY-w5-H8p" firstAttribute="centerX" secondItem="kXL-v2-2CR" secondAttribute="centerX" id="JfB-f1-JrG"/>
                             <constraint firstItem="mm1-1F-R6U" firstAttribute="trailing" secondItem="CRY-w5-H8p" secondAttribute="trailing" id="MIN-Dk-Iwb"/>
@@ -347,7 +341,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7h-A1-wti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZwJ-JR-5cV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="611"/>
+            <point key="canvasLocation" x="1282.608695652174" y="610.71428571428567"/>
         </scene>
         <!--Recipes Table View Controller-->
         <scene sceneID="4PZ-QD-Ix6">
@@ -406,7 +400,7 @@
             <objects>
                 <viewController id="n42-81-y1V" customClass="CalendarViewController" customModule="miCocinaEconomica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="obm-Lh-2zL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="420"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iNY-9c-oOh"/>
@@ -424,36 +418,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-rZ-dO4">
-                                <rect key="frame" x="20" y="112" width="374" height="530"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FjT-sc-ii8">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="AjE-Bc-vvh">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ae6-bJ-XwJ">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yw9-6i-b5O">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem id="SqJ-pp-tjX">
+                                        <barButtonItem key="leftBarButtonItem" title="Regresar" id="evP-Sy-1WY">
+                                            <connections>
+                                                <segue destination="hUe-rf-SAW" kind="unwind" unwindAction="unwindToMainMenu:" id="eBd-TL-dBq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Guardar Receta" id="9ue-i7-kOk"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Yw9-6i-b5O" firstAttribute="leading" secondItem="bRs-lo-imN" secondAttribute="leading" id="FWQ-A1-org"/>
+                            <constraint firstItem="Yw9-6i-b5O" firstAttribute="top" secondItem="bRs-lo-imN" secondAttribute="top" id="YN7-kc-TO0"/>
+                            <constraint firstItem="Yw9-6i-b5O" firstAttribute="centerX" secondItem="533-7z-YmO" secondAttribute="centerX" id="nje-IZ-aJ6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bRs-lo-imN"/>
                     </view>
-                    <connections>
-                        <segue destination="hZH-L5-BKY" kind="presentation" modalPresentationStyle="fullScreen" id="4oU-gY-jFj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDa-Pn-tqc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="hUe-rf-SAW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="300" y="1351"/>
         </scene>
