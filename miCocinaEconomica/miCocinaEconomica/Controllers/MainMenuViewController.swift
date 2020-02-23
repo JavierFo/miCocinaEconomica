@@ -8,6 +8,8 @@
 
 import UIKit
 import Lottie
+import FirebaseStorage
+import SDWebImage
 
 class MainMenuViewController: UIViewController {
     
@@ -15,15 +17,32 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var dayMenuImage: UIImageView!
     
     let animationView = AnimationView(name: "2605-cooking")
-
+    var FirebaseRecipe = FirebaseStorage()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
      override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
         dayMenuImage.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector (self.sendToMenusTableView(sender:)))
         tapGestureRecognizer.numberOfTouchesRequired = 1
-     dayMenuImage.addGestureRecognizer(tapGestureRecognizer)
+        dayMenuImage.addGestureRecognizer(tapGestureRecognizer)
+                
+        let nameOfDish = FirebaseRecipe.getNameForJSONRecipe { (nameDish) in
+            print(nameDish)
+            let calledRecipe = self.FirebaseRecipe.getRecipesJSON(forDish: nameDish) { (Recipe) in
+                print(Recipe)
+                print(Recipe.foto_url)
+                let image_url = NSURL(string: Recipe.foto_url)
+                print(image_url)
+                self.dayMenuImage.sd_setImage(with: image_url as URL?)
+            }
         }
+        
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         animationView.frame = animationArea.frame
@@ -40,7 +59,7 @@ class MainMenuViewController: UIViewController {
     }
     
     @IBAction func unwindToMainMenu(_ unwindSegue: UIStoryboardSegue) {
-      }
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         

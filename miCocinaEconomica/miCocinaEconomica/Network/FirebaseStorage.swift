@@ -13,6 +13,7 @@ import FirebaseDatabase
 class FirebaseStorage {
     
     var ref: DatabaseReference!
+    var nameref: DatabaseReference!
     var  title_ : String = ""
     var  preparacion_ : String = ""
     var  porciones_ : Int = 0
@@ -20,8 +21,17 @@ class FirebaseStorage {
     var  foto_url_ : String = ""
     //var ref = Database.database().reference()
     
+    func getNameForJSONRecipe(completion: @escaping ((_ recipeName : String) -> ())) {
+        nameref = Database.database().reference()
+        nameref.child("MenuDelDia").observe(.value) { (DataSnapshot) in
+            let MenuOfTheDayName = DataSnapshot.value as? String
+            if let dayMenuName = MenuOfTheDayName{
+                completion(dayMenuName)
+            }
+        }
+    }
+    
     func getRecipesJSON(forDish dish: String, completion: @escaping ((_ recipe : Recipe) -> ())) {
-        
         
         ref = Database.database().reference()
         //let recipeHandle : DatabaseHandle?
@@ -41,9 +51,8 @@ class FirebaseStorage {
             let completeRecipe = Recipe(foto_url: self.foto_url_, ingredientes: self.ingredientes_, porciones: self.porciones_, preparacion: self.preparacion_, titulo: self.title_)
             completion(completeRecipe)
             
-            })
+        })
     }
-    
     
     
 }

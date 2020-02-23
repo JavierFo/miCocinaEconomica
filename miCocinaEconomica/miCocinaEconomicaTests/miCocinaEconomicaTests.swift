@@ -32,14 +32,28 @@ class miCocinaEconomicaTests: XCTestCase {
                 XCTAssertNotNil(IngredientDetails)
             }
         }
-
     }
     
     func testGetRecipesFromDatabase(){
         let ref = Database.database().reference()
         ref.child("ArrozConFrijoles").observe(.childAdded) { (DataSnapshot) in
                 XCTAssertNotNil(DataSnapshot)
-            
+        }
+    }
+    
+    func testGetJSONFromDatabase(){
+        let FirebaseRecipe = FirebaseStorage()
+        FirebaseRecipe.getRecipesJSON(forDish: "wololo") { _Recipe in
+            let passedRecipe : Recipe = _Recipe
+            XCTAssertThrowsError(passedRecipe)
+        }
+    }
+    
+    func testGetDishDayName() {
+        let FirebaseRecipe = FirebaseStorage()
+        FirebaseRecipe.getNameForJSONRecipe { (nameOfDish) in
+            let _nameOfDish = nameOfDish
+            XCTAssertNotNil(_nameOfDish)
         }
     }
     
