@@ -9,6 +9,7 @@
 import XCTest
 import Lottie
 @testable import miCocinaEconomica
+import FirebaseDatabase
 
 class miCocinaEconomicaTests: XCTestCase {
 
@@ -32,6 +33,14 @@ class miCocinaEconomicaTests: XCTestCase {
             }
         }
 
+    }
+    
+    func testGetRecipesFromDatabase(){
+        let ref = Database.database().reference()
+        ref.child("ArrozConFrijoles").observe(.childAdded) { (DataSnapshot) in
+                XCTAssertNotNil(DataSnapshot)
+            
+        }
     }
     
     

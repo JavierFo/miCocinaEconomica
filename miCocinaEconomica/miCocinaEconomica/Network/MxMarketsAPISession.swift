@@ -51,7 +51,6 @@ class MxMarketsAPISession{
                     print("Unexpected error with the request")
                     }
                 }
-        
             task.resume()
         }
     
