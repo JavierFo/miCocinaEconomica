@@ -33,7 +33,7 @@ class DishView: UIView{
     
     private func dish(){
         //          Hace un auto cargado
-        Bundle.main.loadNibNamed("BoxView", owner: self, options: nil)
+        Bundle.main.loadNibNamed("DishView", owner: self, options: nil)
         //          Cuando el componente se cargue en memoria, se pone en la vista que lo mando a llamar
         addSubview(dishViewContainer)
         //        Tamaño dependendiendo de donde aparezca

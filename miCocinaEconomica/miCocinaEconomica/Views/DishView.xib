@@ -13,7 +13,7 @@
                 <outlet property="dishPortionsLabel" destination="Us2-eW-cxm" id="9iA-pl-WiS"/>
                 <outlet property="dishPriceLabel" destination="FVG-JV-c69" id="GyG-9z-wJ3"/>
                 <outlet property="dishTitleLabel" destination="hA7-ds-q9n" id="ego-hl-DQF"/>
-                <outlet property="dishViewContainer" destination="iN0-l3-epB" id="ynu-BI-eKm"/>
+                <outlet property="dishViewContainer" destination="iN0-l3-epB" id="SKF-HO-yrE"/>
                 <outlet property="ingredientsTextView" destination="jvg-Av-lZU" id="hJ9-5o-mZw"/>
                 <outlet property="preparationTextView" destination="VYU-jz-t8X" id="fBN-nm-tsD"/>
             </connections>

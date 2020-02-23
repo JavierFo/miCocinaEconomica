@@ -13,14 +13,22 @@ class TabBarController: UITabBarController {
     @IBInspectable var defaultIndex: Int = 0
     var JSONList = MxMarketsAPISession()
     var FirebaseRecipe = FirebaseStorage()
+    var namE : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = defaultIndex
-
-
+                
+//        FirebaseRecipe.getNameForJSONRecipe { (name)  in
+//
+//        }
+        
+//        FirebaseRecipe.getRecipesJSON(forDish: nameDish)  { (Recipe) in
+//            //print(Recipe)
+//            //print(Recipe.foto_url)
+//        }
     }
-
+    
 
 }
 

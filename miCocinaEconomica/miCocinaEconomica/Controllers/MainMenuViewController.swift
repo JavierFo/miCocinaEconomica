@@ -11,6 +11,10 @@ import Lottie
 import FirebaseStorage
 import SDWebImage
 
+//protocol DataModelDelegate: class {
+//    func didRecieveDataUpdate(data: Recipe)
+//}
+
 class MainMenuViewController: UIViewController {
     
     @IBOutlet weak var animationArea: UIView!
@@ -25,23 +29,19 @@ class MainMenuViewController: UIViewController {
     
      override func viewDidLoad() {
             super.viewDidLoad()
-            // Do any additional setup after loading the view.
+
+        //weak var delegate: DataModelDelegate?
         dayMenuImage.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector (self.sendToMenusTableView(sender:)))
         tapGestureRecognizer.numberOfTouchesRequired = 1
         dayMenuImage.addGestureRecognizer(tapGestureRecognizer)
-                
-        let nameOfDish = FirebaseRecipe.getNameForJSONRecipe { (nameDish) in
-            print(nameDish)
-            let calledRecipe = self.FirebaseRecipe.getRecipesJSON(forDish: nameDish) { (Recipe) in
-                print(Recipe)
-                print(Recipe.foto_url)
+                    
+        FirebaseRecipe.getNameForJSONRecipe { (nameDish) in
+            self.FirebaseRecipe.getRecipesJSON(forDish: nameDish) { (Recipe) in
                 let image_url = NSURL(string: Recipe.foto_url)
-                print(image_url)
                 self.dayMenuImage.sd_setImage(with: image_url as URL?)
             }
         }
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -66,7 +66,6 @@ class MainMenuViewController: UIViewController {
           if segue.identifier == "DayMenu" {
            
           }
-        
     }
     
 }
