@@ -13,6 +13,9 @@ class RecipesViewController: UIViewController {
     @IBAction func unwindToCalendarRecipes(_ unwindSegue: UIStoryboardSegue) {
     }
     
+    override func viewDidLoad() {
+
+    }
    
 }
 

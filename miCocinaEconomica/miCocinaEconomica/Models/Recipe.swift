@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Recipe {
+struct Recipe : Codable {
     var foto_url : String
     var ingredientes : [String]
     var porciones : Int

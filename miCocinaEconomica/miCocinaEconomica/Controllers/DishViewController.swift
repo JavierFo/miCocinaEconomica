@@ -45,6 +45,18 @@ class DishViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
 
     }
+    
+    @IBAction func saveRecipe(_ sender: UIBarButtonItem) {
+        
+        FirebaseRecipe.getNameForJSONRecipe { (nameDish) in
+        self.FirebaseRecipe.getRecipesJSON(forDish: nameDish) { (Recipe) in
+            
+                savetoFile(nameOfPathComponent: "RecetaDelDia", objectToEncode: Recipe)
+            }
+        }
+    }
+    
+    
 }
 
 //extension DishViewController: DataModelDelegate{

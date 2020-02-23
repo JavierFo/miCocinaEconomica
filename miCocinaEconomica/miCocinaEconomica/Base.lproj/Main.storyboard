@@ -62,15 +62,19 @@
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellMenus" id="Kcd-c6-KMt">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellMenus" id="EZe-mj-dOv">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oHM-I4-pVb">
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OjL-BF-ZK7">
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="lCw-Qv-U6d" id="MMb-ar-vTM"/>
+                                                    <outlet property="delegate" destination="lCw-Qv-U6d" id="Qa8-TR-CPs"/>
+                                                </connections>
                                             </collectionView>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="qW0-IX-oBh"/>
@@ -116,6 +120,7 @@
                     <connections>
                         <outlet property="animationArea" destination="Ug7-gQ-E6s" id="uP7-Yl-065"/>
                         <outlet property="dayMenuImage" destination="OXD-x8-Vje" id="dTP-ZW-qr5"/>
+                        <outlet property="menusCollectionView" destination="H69-eg-zcj" id="28V-R5-18l"/>
                         <segue destination="Mws-xA-T09" kind="presentation" modalPresentationStyle="fullScreen" id="BZ1-vh-7Kf"/>
                         <segue destination="eeP-Iy-fIE" kind="presentation" identifier="DayMenu" modalPresentationStyle="fullScreen" id="hVd-Rx-fuE"/>
                     </connections>
@@ -461,7 +466,11 @@
                                                 <segue destination="hUe-rf-SAW" kind="unwind" unwindAction="unwindToMainMenu:" id="eBd-TL-dBq"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Guardar Receta" id="9ue-i7-kOk"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Guardar Receta" id="9ue-i7-kOk">
+                                            <connections>
+                                                <action selector="saveRecipe:" destination="eeP-Iy-fIE" id="kPa-c8-PXc"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

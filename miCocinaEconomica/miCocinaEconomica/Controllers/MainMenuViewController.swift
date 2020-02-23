@@ -19,6 +19,7 @@ class MainMenuViewController: UIViewController {
     
     @IBOutlet weak var animationArea: UIView!
     @IBOutlet weak var dayMenuImage: UIImageView!
+    @IBOutlet weak var menusCollectionView: UICollectionView!
     
     let animationView = AnimationView(name: "2605-cooking")
     var FirebaseRecipe = FirebaseStorage()
@@ -79,12 +80,12 @@ extension MainMenuViewController: UICollectionViewDelegate, UICollectionViewData
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellMenus", for: indexPath as IndexPath)
          
-         cell.backgroundColor = UIColor.clear
-         cell.layer.borderColor = UIColor.black.cgColor
-         cell.layer.borderWidth = 1
-         cell.layer.cornerRadius = 5
+        cell.backgroundColor = UIColor.gray
+        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 5
          
-         return cell
+        return cell
     }
     
 }
