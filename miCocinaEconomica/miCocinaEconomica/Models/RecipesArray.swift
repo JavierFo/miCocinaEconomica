@@ -1,5 +1,5 @@
 //
-//  FileManager.swift
+//  RecipesArray.swift
 //  miCocinaEconomica
 //
 //  Created by Javier Ferrer on 2/23/20.
@@ -8,6 +8,9 @@
 
 import Foundation
 
+class RecipesArray : Codable{
+    
+    var recipesArray : [Recipe] = []
     
     func savetoFile(nameOfPathComponent path : String, objectToEncode object: Recipe){
         
@@ -15,26 +18,29 @@ import Foundation
         let recipesURL = documentsDirectory.appendingPathComponent(path).appendingPathExtension("plist")
         
         let propertyListEncoder = PropertyListEncoder()
-        let recipeToEncode = try? propertyListEncoder.encode(object)
         
-        try? recipeToEncode?.write(to: recipesURL, options: .noFileProtection)
+        recipesArray.append(object)
+
+            let recipeToEncode = try? propertyListEncoder.encode(recipesArray)
+            try? recipeToEncode?.write(to: recipesURL, options: .noFileProtection)
     }
 
-    func loadFromFile(nameOfPathComponent path : String) -> Recipe{
+    func loadFromFile(nameOfPathComponent path : String) -> [Recipe]{
         
-        var decodedRecipe_ : Recipe?
-        
+        var decodedRecipe_ : [Recipe]?
+        var finalRecipeArray : [Recipe]?
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let recipesURL = documentsDirectory.appendingPathComponent(path).appendingPathExtension("plist")
         
         let propertyListDecoder = PropertyListDecoder()
-        if let retrievedRecipe = try? Data(contentsOf: recipesURL), let decodedRecipe = try? propertyListDecoder.decode(Recipe.self, from: retrievedRecipe){
+        if let retrievedRecipe = try? Data(contentsOf: recipesURL), let decodedRecipe = try? propertyListDecoder.decode([Recipe].self, from: retrievedRecipe){
             decodedRecipe_ = decodedRecipe
         }
         
-        let decodedRecipeFinal = decodedRecipe_ ?? Recipe.init(foto_url: "-", ingredientes: ["-"], porciones: 0, preparacion: "-", titulo: "-")
+        if let decodedRecipeFinal = decodedRecipe_ {
+            finalRecipeArray = decodedRecipeFinal
+        }
         
-        return decodedRecipeFinal
+        return finalRecipeArray ?? []
     }
-    
-
+}

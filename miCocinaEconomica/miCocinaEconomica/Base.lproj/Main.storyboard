@@ -278,40 +278,106 @@
             </objects>
             <point key="canvasLocation" x="-1310" y="611"/>
         </scene>
-        <!--Mi Recetario -->
-        <scene sceneID="9Oc-Bx-pl4">
+        <!--Mis Recetas-->
+        <scene sceneID="YLj-dJ-aUs">
             <objects>
-                <viewController id="C1b-Kt-XzV" customClass="RecipesViewController" customModule="miCocinaEconomica" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KA2-az-FZG">
+                <tableViewController id="4qY-It-DT7" customClass="RecipesViewController" customModule="miCocinaEconomica" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="4DM-Pj-yNf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <toolbar key="tableHeaderView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mAw-Pl-KNq">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="JP4-JN-Rk6"/>
+                                <barButtonItem title="Mi Recetario Semanal" style="plain" id="dxL-uk-R1y">
+                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="roC-Jj-c31">
+                                        <rect key="frame" x="242" y="7" width="152" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Mi Recetario Semanal"/>
+                                        <connections>
+                                            <segue destination="zIJ-6g-kdJ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="f6K-1t-T48"/>
+                                        </connections>
+                                    </button>
+                                </barButtonItem>
+                            </items>
+                        </toolbar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="recipeTableCell" textLabel="oND-dM-Oy7" style="IBUITableViewCellStyleDefault" id="TOh-Xz-Hcl">
+                                <rect key="frame" x="0.0" y="72" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TOh-Xz-Hcl" id="KgY-nH-ygW">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="wololo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oND-dM-Oy7">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4qY-It-DT7" id="3Oq-Rm-Phr"/>
+                            <outlet property="delegate" destination="4qY-It-DT7" id="kin-sa-dxb"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Mis Recetas" image="Book46" id="c0B-ra-vgk"/>
+                    <connections>
+                        <segue destination="mG2-YA-6vk" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="fIz-eE-QXG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ix4-SX-BMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="298.55072463768118" y="610.71428571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7TP-MN-BhI">
+            <objects>
+                <viewController id="mG2-YA-6vk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rt2-0o-3D5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iau-F9-hSV">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-Fz-3OA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
-                                    <navigationItem id="dMf-Kz-UjR">
-                                        <barButtonItem key="rightBarButtonItem" title="Mi Recetario Semanal " id="xbR-pg-ZfL">
+                                    <navigationItem id="rsv-UP-41q">
+                                        <barButtonItem key="leftBarButtonItem" title="Regresar" id="Pbe-Ip-BJB">
                                             <connections>
-                                                <segue destination="zIJ-6g-kdJ" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="Kl9-aZ-GhS"/>
+                                                <segue destination="ZJ2-sm-hdB" kind="unwind" unwindAction="unwindToCalendarRecipes:" id="aWV-pa-PKo"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqI-Si-p7f" customClass="DishView" customModule="miCocinaEconomica" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Iau-F9-hSV" firstAttribute="leading" secondItem="Lqe-cc-wua" secondAttribute="leading" id="PAT-0J-BHB"/>
-                            <constraint firstItem="Iau-F9-hSV" firstAttribute="top" secondItem="Lqe-cc-wua" secondAttribute="top" id="Vsz-4A-y1I"/>
-                            <constraint firstItem="Iau-F9-hSV" firstAttribute="centerX" secondItem="KA2-az-FZG" secondAttribute="centerX" id="i6V-88-fNa"/>
+                            <constraint firstItem="Aex-Fz-3OA" firstAttribute="top" secondItem="iEP-hx-EMG" secondAttribute="top" id="CGI-i1-OOL"/>
+                            <constraint firstItem="wqI-Si-p7f" firstAttribute="bottom" secondItem="iEP-hx-EMG" secondAttribute="bottom" id="OUs-bI-XFO"/>
+                            <constraint firstItem="wqI-Si-p7f" firstAttribute="top" secondItem="Aex-Fz-3OA" secondAttribute="bottom" id="Udw-C7-mvP"/>
+                            <constraint firstItem="Aex-Fz-3OA" firstAttribute="centerX" secondItem="rt2-0o-3D5" secondAttribute="centerX" id="a0Z-Pb-SYt"/>
+                            <constraint firstItem="Aex-Fz-3OA" firstAttribute="trailing" secondItem="wqI-Si-p7f" secondAttribute="trailing" id="fxs-M3-HnM"/>
+                            <constraint firstItem="Aex-Fz-3OA" firstAttribute="leading" secondItem="iEP-hx-EMG" secondAttribute="leading" id="iyo-8P-7bL"/>
+                            <constraint firstItem="Aex-Fz-3OA" firstAttribute="leading" secondItem="wqI-Si-p7f" secondAttribute="leading" id="sX7-cT-hFp"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Lqe-cc-wua"/>
+                        <viewLayoutGuide key="safeArea" id="iEP-hx-EMG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Mi Recetario " image="Book46" id="cdU-vQ-XMy"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y4W-fO-8Go" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fp8-YT-dKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ZJ2-sm-hdB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="301" y="611"/>
+            <point key="canvasLocation" x="1282.608695652174" y="-103.125"/>
         </scene>
         <!--Calendar Recipes View Controller-->
         <scene sceneID="rWN-Dp-KeB">
@@ -327,7 +393,7 @@
                                     <navigationItem id="hRr-9d-a1g">
                                         <barButtonItem key="leftBarButtonItem" title="Mis Recetas" id="Vwk-dS-hRV">
                                             <connections>
-                                                <segue destination="ZwJ-JR-5cV" kind="unwind" unwindAction="unwindToCalendarRecipes:" id="8OC-lb-BGC"/>
+                                                <segue destination="ZwJ-JR-5cV" kind="unwind" unwindAction="unwindToCalendarRecipes:" id="ajK-ec-MY9"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir Receta" id="1H9-pB-xAf">
@@ -412,7 +478,7 @@
                     <connections>
                         <segue destination="elw-lg-xtr" kind="relationship" relationship="viewControllers" id="Hf9-t5-LnW"/>
                         <segue destination="lCw-Qv-U6d" kind="relationship" relationship="viewControllers" id="h9u-Wj-pfa"/>
-                        <segue destination="C1b-Kt-XzV" kind="relationship" relationship="viewControllers" id="P7M-dI-SGf"/>
+                        <segue destination="4qY-It-DT7" kind="relationship" relationship="viewControllers" id="dUV-bC-iFS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eNb-bm-V7z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
