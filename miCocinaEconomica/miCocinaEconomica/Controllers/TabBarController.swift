@@ -18,17 +18,11 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = defaultIndex
-                
-//        FirebaseRecipe.getNameForJSONRecipe { (name)  in
-//
-//        }
-        
-//        FirebaseRecipe.getRecipesJSON(forDish: nameDish)  { (Recipe) in
-//            //print(Recipe)
-//            //print(Recipe.foto_url)
-//        }
-    }
     
 
+    }
+
 }
+    
+
 

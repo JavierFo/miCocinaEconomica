@@ -51,6 +51,7 @@ class FirebaseStorage {
             let completeRecipe = Recipe(foto_url: self.foto_url_, ingredientes: self.ingredientes_, porciones: self.porciones_, preparacion: self.preparacion_, titulo: self.title_)
             completion(completeRecipe)
             
+            
         })
     }
     
