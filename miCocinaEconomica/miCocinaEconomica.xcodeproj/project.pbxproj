@@ -16,6 +16,7 @@
 		100FFC6E23F90A0F00ABB1FF /* miCocinaEconomicaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC6D23F90A0F00ABB1FF /* miCocinaEconomicaTests.swift */; };
 		100FFC7923F90A1000ABB1FF /* miCocinaEconomicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */; };
 		10108DEF2403270E009CC532 /* RecipesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DEE2403270E009CC532 /* RecipesArray.swift */; };
+		10108DF1240352E9009CC532 /* SavedDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DF0240352E9009CC532 /* SavedDishViewController.swift */; };
 		108C15AE23FFCB2C004891B2 /* MxMarketsAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */; };
 		109552FC2400ABF800101469 /* FirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109552FB2400ABF800101469 /* FirebaseStorage.swift */; };
 		109552FE2400D8FF00101469 /* 2605-cooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 109552FD2400D8FF00101469 /* 2605-cooking.json */; };
@@ -74,6 +75,7 @@
 		100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = miCocinaEconomicaUITests.swift; sourceTree = "<group>"; };
 		100FFC7A23F90A1000ABB1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10108DEE2403270E009CC532 /* RecipesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesArray.swift; sourceTree = "<group>"; };
+		10108DF0240352E9009CC532 /* SavedDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDishViewController.swift; sourceTree = "<group>"; };
 		108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxMarketsAPISession.swift; sourceTree = "<group>"; };
 		109552FB2400ABF800101469 /* FirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorage.swift; sourceTree = "<group>"; };
 		109552FD2400D8FF00101469 /* 2605-cooking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "2605-cooking.json"; path = "../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/2605-cooking.json"; sourceTree = "<group>"; };
@@ -192,6 +194,15 @@
 			path = miCocinaEconomicaUITests;
 			sourceTree = "<group>";
 		};
+		10108DF2240352F3009CC532 /* DishViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				10E350ED24028BDF00D0B83D /* DishViewController.swift */,
+				10108DF0240352E9009CC532 /* SavedDishViewController.swift */,
+			);
+			path = DishViewControllers;
+			sourceTree = "<group>";
+		};
 		108C15A623FF8DA8004891B2 /* JSONLotties */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,7 +225,7 @@
 		10C6D9EC23FB67EA00F8778A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				10E350ED24028BDF00D0B83D /* DishViewController.swift */,
+				10108DF2240352F3009CC532 /* DishViewControllers */,
 				100FFC5A23F90A0F00ABB1FF /* TabBarController.swift */,
 				10F5647C23FCBB440028F856 /* MainMenuViewController.swift */,
 				10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */,
@@ -536,6 +547,7 @@
 				10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */,
 				10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */,
 				100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */,
+				10108DF1240352E9009CC532 /* SavedDishViewController.swift in Sources */,
 				10C8D7FA23FEBC2800BFFB96 /* CalendarRecipesViewController.swift in Sources */,
 				10E350E624021F7900D0B83D /* Recipe.swift in Sources */,
 				10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */,

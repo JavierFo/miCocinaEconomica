@@ -10,4 +10,6 @@ import UIKit
 
 class IngredientsTableViewController: UITableViewController {
     
+    let mxProducts = MxMarketsAPISession()
+    
 }

@@ -271,7 +271,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Mi Despensa" image="Refrigerator46" id="dxQ-Ud-LSa"/>
                     <connections>
-                        <segue destination="yi7-CN-qq2" kind="presentation" modalPresentationStyle="fullScreen" id="OwP-72-FVw"/>
+                        <segue destination="yi7-CN-qq2" kind="presentation" identifier="RecipeForIngredientsSegue" modalPresentationStyle="fullScreen" id="OwP-72-FVw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlA-3b-5hB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -329,50 +329,57 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Mis Recetas" image="Book46" id="c0B-ra-vgk"/>
                     <connections>
-                        <segue destination="mG2-YA-6vk" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="fIz-eE-QXG"/>
+                        <segue destination="mG2-YA-6vk" kind="presentation" identifier="savedRecipeView" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="4zI-5x-Mfx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ix4-SX-BMF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="298.55072463768118" y="610.71428571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Saved Dish View Controller-->
         <scene sceneID="7TP-MN-BhI">
             <objects>
-                <viewController id="mG2-YA-6vk" sceneMemberID="viewController">
+                <viewController id="mG2-YA-6vk" customClass="SavedDishViewController" customModule="miCocinaEconomica" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rt2-0o-3D5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqI-Si-p7f" customClass="DishView" customModule="miCocinaEconomica" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aex-Fz-3OA">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem id="rsv-UP-41q">
                                         <barButtonItem key="leftBarButtonItem" title="Regresar" id="Pbe-Ip-BJB">
                                             <connections>
-                                                <segue destination="ZJ2-sm-hdB" kind="unwind" unwindAction="unwindToCalendarRecipes:" id="aWV-pa-PKo"/>
+                                                <segue destination="ZJ2-sm-hdB" kind="unwind" unwindAction="unwindToCalendarRecipes2:" id="6yB-36-Bi8"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wqI-Si-p7f" customClass="DishView" customModule="miCocinaEconomica" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="iEP-hx-EMG" firstAttribute="trailing" secondItem="wqI-Si-p7f" secondAttribute="trailing" id="6oc-Uz-UiG"/>
                             <constraint firstItem="Aex-Fz-3OA" firstAttribute="top" secondItem="iEP-hx-EMG" secondAttribute="top" id="CGI-i1-OOL"/>
                             <constraint firstItem="wqI-Si-p7f" firstAttribute="bottom" secondItem="iEP-hx-EMG" secondAttribute="bottom" id="OUs-bI-XFO"/>
                             <constraint firstItem="wqI-Si-p7f" firstAttribute="top" secondItem="Aex-Fz-3OA" secondAttribute="bottom" id="Udw-C7-mvP"/>
+                            <constraint firstItem="wqI-Si-p7f" firstAttribute="leading" secondItem="iEP-hx-EMG" secondAttribute="leading" id="ZdV-NA-JtW"/>
                             <constraint firstItem="Aex-Fz-3OA" firstAttribute="centerX" secondItem="rt2-0o-3D5" secondAttribute="centerX" id="a0Z-Pb-SYt"/>
+                            <constraint firstItem="iEP-hx-EMG" firstAttribute="bottom" secondItem="wqI-Si-p7f" secondAttribute="bottom" id="a2Z-vo-hML"/>
                             <constraint firstItem="Aex-Fz-3OA" firstAttribute="trailing" secondItem="wqI-Si-p7f" secondAttribute="trailing" id="fxs-M3-HnM"/>
                             <constraint firstItem="Aex-Fz-3OA" firstAttribute="leading" secondItem="iEP-hx-EMG" secondAttribute="leading" id="iyo-8P-7bL"/>
+                            <constraint firstItem="wqI-Si-p7f" firstAttribute="top" secondItem="iEP-hx-EMG" secondAttribute="top" constant="44" id="ouj-iW-1rd"/>
                             <constraint firstItem="Aex-Fz-3OA" firstAttribute="leading" secondItem="wqI-Si-p7f" secondAttribute="leading" id="sX7-cT-hFp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iEP-hx-EMG"/>
                     </view>
+                    <connections>
+                        <outlet property="dishView" destination="wqI-Si-p7f" id="iqn-xr-E2y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fp8-YT-dKH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZJ2-sm-hdB" userLabel="Exit" sceneMemberID="exit"/>

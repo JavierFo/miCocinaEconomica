@@ -13,9 +13,14 @@ class RecipesViewController: UITableViewController {
     @IBAction func unwindToCalendarRecipes(_ unwindSegue: UIStoryboardSegue) {
     }
     
+    @IBAction func unwindToCalendarRecipes2(_ unwindSegue: UIStoryboardSegue) {
+    }
+    
+    var pressedRecipe : String = ""
+    var pressedRecipee_ : Recipe?
     override func viewDidLoad() {
-         let recipes_Array = RecipesArray()
-        print(recipes_Array.recipesArray)
+         //let recipes_Array = RecipesArray()
+        //print(recipes_Array.recipesArray)
         //recipesTableView.reloadData()
     }
     
@@ -23,8 +28,12 @@ class RecipesViewController: UITableViewController {
         //recipesTableView.reloadData()
     }
    
-    let data: [String] = ["4","5","4","5"]
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "savedRecipeView"{ 
+            let pressedRecipe_ = segue.destination as! SavedDishViewController
+            pressedRecipe_.recipe_ = pressedRecipee_
+        }
+    }
 }
 
 extension RecipesViewController{
@@ -49,6 +58,19 @@ extension RecipesViewController{
             //recipes_Array.recipesArray[indexPath.row].titulo
         
         return cell
+    }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        let rcpes = RecipesArray()
+        let rcpesArray = rcpes.loadFromFile(nameOfPathComponent: "RecetaDelDia")
+        pressedRecipee_ = rcpesArray[indexPath.row]
+        performSegue(withIdentifier: "savedRecipeView", sender: cell)
+        //print(pressedRecipee_)
+
     }
     
     
