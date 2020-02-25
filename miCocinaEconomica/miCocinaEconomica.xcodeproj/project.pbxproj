@@ -17,6 +17,8 @@
 		100FFC7923F90A1000ABB1FF /* miCocinaEconomicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */; };
 		10108DEF2403270E009CC532 /* RecipesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DEE2403270E009CC532 /* RecipesArray.swift */; };
 		10108DF1240352E9009CC532 /* SavedDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DF0240352E9009CC532 /* SavedDishViewController.swift */; };
+		1054A67624051E7D003E4E16 /* GeneralArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054A67524051E7D003E4E16 /* GeneralArray.swift */; };
+		1054A67824052101003E4E16 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054A67724052101003E4E16 /* FileManager.swift */; };
 		108C15AE23FFCB2C004891B2 /* MxMarketsAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */; };
 		109552FC2400ABF800101469 /* FirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109552FB2400ABF800101469 /* FirebaseStorage.swift */; };
 		109552FE2400D8FF00101469 /* 2605-cooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 109552FD2400D8FF00101469 /* 2605-cooking.json */; };
@@ -32,11 +34,13 @@
 		10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */; };
 		10C8D7F223FE3ABA00BFFB96 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8D7F123FE3ABA00BFFB96 /* CalendarViewController.swift */; };
 		10C8D7FA23FEBC2800BFFB96 /* CalendarRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C8D7F923FEBC2800BFFB96 /* CalendarRecipesViewController.swift */; };
+		10D312DD2403DE5800A1CF50 /* selectedDishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D312DB2403DE5800A1CF50 /* selectedDishCollectionViewCell.swift */; };
+		10D312DE2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10D312DC2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib */; };
+		10D312E12403F16400A1CF50 /* InternalRecipesSorterer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10D312E02403F16400A1CF50 /* InternalRecipesSorterer.swift */; };
 		10E350E624021F7900D0B83D /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E350E524021F7900D0B83D /* Recipe.swift */; };
 		10E350E82402756400D0B83D /* DishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10E350E72402756400D0B83D /* DishView.xib */; };
 		10E350EC24027E5C00D0B83D /* DishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E350EB24027E5C00D0B83D /* DishView.swift */; };
 		10E350EE24028BDF00D0B83D /* DishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10E350ED24028BDF00D0B83D /* DishViewController.swift */; };
-		10F21E662403708500D45565 /* SendToSideTableViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F21E652403708500D45565 /* SendToSideTableViewControllers.swift */; };
 		10F21E682403932900D45565 /* IngredientsDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F21E672403932900D45565 /* IngredientsDishViewController.swift */; };
 		10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5647C23FCBB440028F856 /* MainMenuViewController.swift */; };
 		ABBAEE5754DEC852C7EBCFD2 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D07333D124BBCF38471A776 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework */; };
@@ -78,6 +82,8 @@
 		100FFC7A23F90A1000ABB1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10108DEE2403270E009CC532 /* RecipesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesArray.swift; sourceTree = "<group>"; };
 		10108DF0240352E9009CC532 /* SavedDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDishViewController.swift; sourceTree = "<group>"; };
+		1054A67524051E7D003E4E16 /* GeneralArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralArray.swift; sourceTree = "<group>"; };
+		1054A67724052101003E4E16 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxMarketsAPISession.swift; sourceTree = "<group>"; };
 		109552FB2400ABF800101469 /* FirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorage.swift; sourceTree = "<group>"; };
 		109552FD2400D8FF00101469 /* 2605-cooking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "2605-cooking.json"; path = "../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/2605-cooking.json"; sourceTree = "<group>"; };
@@ -93,11 +99,13 @@
 		10C6D9FD23FC1A8E00F8778A /* RecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewController.swift; sourceTree = "<group>"; };
 		10C8D7F123FE3ABA00BFFB96 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		10C8D7F923FEBC2800BFFB96 /* CalendarRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRecipesViewController.swift; sourceTree = "<group>"; };
+		10D312DB2403DE5800A1CF50 /* selectedDishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selectedDishCollectionViewCell.swift; sourceTree = "<group>"; };
+		10D312DC2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = selectedDishCollectionViewCell.xib; sourceTree = "<group>"; };
+		10D312E02403F16400A1CF50 /* InternalRecipesSorterer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalRecipesSorterer.swift; sourceTree = "<group>"; };
 		10E350E524021F7900D0B83D /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		10E350E72402756400D0B83D /* DishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DishView.xib; sourceTree = "<group>"; };
 		10E350EB24027E5C00D0B83D /* DishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishView.swift; sourceTree = "<group>"; };
 		10E350ED24028BDF00D0B83D /* DishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishViewController.swift; sourceTree = "<group>"; };
-		10F21E652403708500D45565 /* SendToSideTableViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToSideTableViewControllers.swift; sourceTree = "<group>"; };
 		10F21E672403932900D45565 /* IngredientsDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsDishViewController.swift; sourceTree = "<group>"; };
 		10F5647C23FCBB440028F856 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		2D07333D124BBCF38471A776 /* Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_miCocinaEconomica_miCocinaEconomicaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +172,7 @@
 		100FFC5523F90A0F00ABB1FF /* miCocinaEconomica */ = {
 			isa = PBXGroup;
 			children = (
+				10D312DF2403F08400A1CF50 /* DataSourceFirebase */,
 				10C6D9EB23FB67DE00F8778A /* Models */,
 				10C6D9EF23FC190B00F8778A /* Utils */,
 				10C6D9ED23FB67F200F8778A /* Views */,
@@ -198,14 +207,14 @@
 			path = miCocinaEconomicaUITests;
 			sourceTree = "<group>";
 		};
-		10108DF2240352F3009CC532 /* DishViewControllers */ = {
+		10108DF2240352F3009CC532 /* ViewControllersForXIBView */ = {
 			isa = PBXGroup;
 			children = (
 				10E350ED24028BDF00D0B83D /* DishViewController.swift */,
 				10108DF0240352E9009CC532 /* SavedDishViewController.swift */,
 				10F21E672403932900D45565 /* IngredientsDishViewController.swift */,
 			);
-			path = DishViewControllers;
+			path = ViewControllersForXIBView;
 			sourceTree = "<group>";
 		};
 		108C15A623FF8DA8004891B2 /* JSONLotties */ = {
@@ -222,7 +231,9 @@
 				1095530124011E0000101469 /* IngredientsList.swift */,
 				10955303240143A200101469 /* IngredientDetails.swift */,
 				10E350E524021F7900D0B83D /* Recipe.swift */,
+				10D312E02403F16400A1CF50 /* InternalRecipesSorterer.swift */,
 				10108DEE2403270E009CC532 /* RecipesArray.swift */,
+				1054A67524051E7D003E4E16 /* GeneralArray.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -230,7 +241,7 @@
 		10C6D9EC23FB67EA00F8778A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				10108DF2240352F3009CC532 /* DishViewControllers */,
+				10108DF2240352F3009CC532 /* ViewControllersForXIBView */,
 				100FFC5A23F90A0F00ABB1FF /* TabBarController.swift */,
 				10F5647C23FCBB440028F856 /* MainMenuViewController.swift */,
 				10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */,
@@ -248,6 +259,8 @@
 			children = (
 				10E350E72402756400D0B83D /* DishView.xib */,
 				10E350EB24027E5C00D0B83D /* DishView.swift */,
+				10D312DB2403DE5800A1CF50 /* selectedDishCollectionViewCell.swift */,
+				10D312DC2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,7 +269,6 @@
 			isa = PBXGroup;
 			children = (
 				108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */,
-				109552FB2400ABF800101469 /* FirebaseStorage.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -266,7 +278,7 @@
 			children = (
 				108C15A623FF8DA8004891B2 /* JSONLotties */,
 				10C6D9F023FC193600F8778A /* Presentation */,
-				10F21E652403708500D45565 /* SendToSideTableViewControllers.swift */,
+				1054A67724052101003E4E16 /* FileManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -280,6 +292,14 @@
 			);
 			name = Presentation;
 			path = "../../../../../Downloads/Materials/MedalCount Completed/MedalCount/Presentation";
+			sourceTree = "<group>";
+		};
+		10D312DF2403F08400A1CF50 /* DataSourceFirebase */ = {
+			isa = PBXGroup;
+			children = (
+				109552FB2400ABF800101469 /* FirebaseStorage.swift */,
+			);
+			path = DataSourceFirebase;
 			sourceTree = "<group>";
 		};
 		4998323885B2FCAC5FE34EBB /* Pods */ = {
@@ -416,6 +436,7 @@
 			files = (
 				100FFC6323F90A0F00ABB1FF /* LaunchScreen.storyboard in Resources */,
 				109552FE2400D8FF00101469 /* 2605-cooking.json in Resources */,
+				10D312DE2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib in Resources */,
 				10E350E82402756400D0B83D /* DishView.xib in Resources */,
 				109553002400D90F00101469 /* GoogleService-Info.plist in Resources */,
 				100FFC6023F90A0F00ABB1FF /* Assets.xcassets in Resources */,
@@ -551,15 +572,18 @@
 				10F21E682403932900D45565 /* IngredientsDishViewController.swift in Sources */,
 				10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */,
 				10C8D7F223FE3ABA00BFFB96 /* CalendarViewController.swift in Sources */,
+				1054A67624051E7D003E4E16 /* GeneralArray.swift in Sources */,
 				10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */,
 				10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */,
 				100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */,
+				10D312E12403F16400A1CF50 /* InternalRecipesSorterer.swift in Sources */,
 				10108DF1240352E9009CC532 /* SavedDishViewController.swift in Sources */,
 				10C8D7FA23FEBC2800BFFB96 /* CalendarRecipesViewController.swift in Sources */,
 				10E350E624021F7900D0B83D /* Recipe.swift in Sources */,
 				10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */,
 				1095530224011E0000101469 /* IngredientsList.swift in Sources */,
 				10C6D9F423FC193600F8778A /* SlideInPresentationAnimator.swift in Sources */,
+				1054A67824052101003E4E16 /* FileManager.swift in Sources */,
 				100FFC5723F90A0F00ABB1FF /* AppDelegate.swift in Sources */,
 				109552FC2400ABF800101469 /* FirebaseStorage.swift in Sources */,
 				108C15AE23FFCB2C004891B2 /* MxMarketsAPISession.swift in Sources */,
@@ -569,8 +593,8 @@
 				10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */,
 				10C6D9F623FC193700F8778A /* SlideInPresentationController.swift in Sources */,
 				100FFC5923F90A0F00ABB1FF /* SceneDelegate.swift in Sources */,
-				10F21E662403708500D45565 /* SendToSideTableViewControllers.swift in Sources */,
 				10E350EC24027E5C00D0B83D /* DishView.swift in Sources */,
+				10D312DD2403DE5800A1CF50 /* selectedDishCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

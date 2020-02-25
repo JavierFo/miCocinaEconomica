@@ -19,7 +19,6 @@ class DishView: UIView{
     @IBOutlet weak var preparationTextView: UITextView!
     
     //    Constructores
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         dish()

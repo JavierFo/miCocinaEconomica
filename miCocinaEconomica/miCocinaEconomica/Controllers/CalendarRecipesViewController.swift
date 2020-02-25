@@ -24,14 +24,11 @@ class CalendarRecipesViewController: UIViewController{
           if segue.identifier == "CalendarRecipesSegue" {
            slideInTransitioningDelegate.direction = .right
           }
-          //controller.delegate = self
           slideInTransitioningDelegate.disableCompactHeight = false
           controller.transitioningDelegate = slideInTransitioningDelegate
           controller.modalPresentationStyle = .custom
         }
         
     }
-    
-    
     
 }

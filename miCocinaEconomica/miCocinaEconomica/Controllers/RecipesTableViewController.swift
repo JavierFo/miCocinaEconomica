@@ -9,9 +9,5 @@
 import UIKit
 
 class RecipesTableViewController: UITableViewController {
-//    override func viewWillAppear(_ animated: Bool) {
-//        let rcpes = RecipesArray()
-//        let rcpesArray = rcpes.loadFromFile(nameOfPathComponent: "RecetaDelDia")
-        //print(rcpesArray)
-   // }
+
 }

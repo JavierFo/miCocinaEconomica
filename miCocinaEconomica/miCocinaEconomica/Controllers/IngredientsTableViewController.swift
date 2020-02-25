@@ -35,6 +35,10 @@ class IngredientsTableViewController: UITableViewController {
         var productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
         productsNameArray.append("Arroz")
         productsNameArray.append("Frijol")
+        productsNameArray.append("Carne")
+        productsNameArray.append("Pollo")
+        productsNameArray.append("Mole")
+        productsNameArray.append("Tortillas")
         
         return productsNameArray.count
      }
@@ -45,6 +49,10 @@ class IngredientsTableViewController: UITableViewController {
         var productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
         productsNameArray.append("Arroz")
         productsNameArray.append("Frijol")
+        productsNameArray.append("Carne")
+        productsNameArray.append("Pollo")
+        productsNameArray.append("Mole")
+        productsNameArray.append("Tortillas")
         
         if buttonCounter.contains(indexPath.row){
             cell.accessoryType = .checkmark
@@ -56,11 +64,18 @@ class IngredientsTableViewController: UITableViewController {
         return cell
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath)
+        
+        //let recipesArray = RecipesArray()
+        //var productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
+        
+        if cell?.textLabel?.text == "Aguacate Hass" {
+            
+        }
+        
+        
         if buttonCounter.contains(indexPath.row){
             let index = buttonCounter.firstIndex(of: indexPath.row)
             buttonCounter.remove(at: index!)
@@ -73,12 +88,6 @@ class IngredientsTableViewController: UITableViewController {
         print(buttonCounter)
   
     }
-    
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        
-        
-    }
-    
-    
+
     
 }

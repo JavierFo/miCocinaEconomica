@@ -19,7 +19,6 @@ class FirebaseStorage {
     var  porciones_ : Int = 0
     var  ingredientes_ : [String] = [""]
     var  foto_url_ : String = ""
-    //var ref = Database.database().reference()
     
     func getNameForJSONRecipe(completion: @escaping ((_ recipeName : String) -> ())) {
         nameref = Database.database().reference()
@@ -34,7 +33,6 @@ class FirebaseStorage {
     func getRecipesJSON(forDish dish: String, completion: @escaping ((_ recipe : Recipe) -> ())) {
         
         ref = Database.database().reference()
-        //let recipeHandle : DatabaseHandle?
         
         ref.child(dish).observe(.value, with: { (DataSnapshot) in
 

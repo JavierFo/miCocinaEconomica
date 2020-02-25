@@ -35,8 +35,7 @@ class CalendarViewController: DayViewController {
 
      override func viewDidLoad() {
        super.viewDidLoad()
-       title = "CalendarKit Demo"
-        //navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Dark", style: .done, target: self, action: nil)
+       //title = "CalendarKit Demo"
        navigationController?.navigationBar.isTranslucent = false
        dayView.autoScrollToFirstEvent = true
        reloadData()
@@ -78,10 +77,10 @@ class CalendarViewController: DayViewController {
      private var createdEvent: EventDescriptor?
 
      override func dayViewDidSelectEventView(_ eventView: EventView) {
-       guard let descriptor = eventView.descriptor as? Event else {
+        guard (eventView.descriptor as? Event) != nil else {
          return
        }
-       print("Event has been selected: \(descriptor) \(String(describing: descriptor.userInfo))")
+       //print("Event has been selected: \(descriptor) \(String(describing: descriptor.userInfo))")
      }
 
      override func dayViewDidLongPressEventView(_ eventView: EventView) {
@@ -89,7 +88,7 @@ class CalendarViewController: DayViewController {
          return
        }
        endEventEditing()
-       print("Event has been longPressed: \(descriptor) \(String(describing: descriptor.userInfo))")
+       //print("Event has been longPressed: \(descriptor) \(String(describing: descriptor.userInfo))")
        beginEditing(event: descriptor, animated: true)
        print(Date())
      }
@@ -101,27 +100,26 @@ class CalendarViewController: DayViewController {
      }
 
      override func dayViewDidBeginDragging(dayView: DayView) {
-       print("DayView did begin dragging")
+        //print("DayView did begin dragging")
      }
 
      override func dayView(dayView: DayView, willMoveTo date: Date) {
-       print("DayView = \(dayView) will move to: \(date)")
+       //print("DayView = \(dayView) will move to: \(date)")
      }
 
      override func dayView(dayView: DayView, didMoveTo date: Date) {
-       print("DayView = \(dayView) did move to: \(date)")
+       //print("DayView = \(dayView) did move to: \(date)")
      }
 
      override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
-       print("Did long press timeline at date \(date)")
-       // Cancel editing current event and start creating a new one
+       //print("Did long press timeline at date \(date)")
        endEventEditing()
 
      }
 
      override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {
-       print("did finish editing \(event)")
-       print("new startDate: \(event.startDate) new endDate: \(event.endDate)")
+       //print("did finish editing \(event)")
+       //print("new startDate: \(event.startDate) new endDate: \(event.endDate)")
 
        if let _ = event.editedEvent {
          event.commitEditing()
@@ -133,7 +131,6 @@ class CalendarViewController: DayViewController {
          self.createdEvent = nil
          endEventEditing()
        }
-
        reloadData()
      }
     

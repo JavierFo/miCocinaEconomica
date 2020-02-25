@@ -18,14 +18,16 @@ class RecipesViewController: UITableViewController {
     
     var pressedRecipe : String = ""
     var pressedRecipee_ : Recipe?
+    var generalArray_ : [Recipe] = []
+    
     override func viewDidLoad() {
-         //let recipes_Array = RecipesArray()
-        //print(recipes_Array.recipesArray)
-        //recipesTableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //recipesTableView.reloadData()
+        tableView.reloadData()
     }
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -39,41 +41,26 @@ class RecipesViewController: UITableViewController {
 extension RecipesViewController{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-          let rcpes = RecipesArray()
-          let rcpesArray = rcpes.loadFromFile(nameOfPathComponent: "RecetaDelDia")
-          //print(rcpesArray)
-        return rcpesArray.count
+        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
+        return savedRecipeToArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeTableCell", for: indexPath)
-        //let cell: UITableViewCell = UITableViewCell(style: .default, reuseIdentifier: "recipeTableCell")
-        //let cell = self.recipesTableView.dequeueReusableCell(withIdentifier: "recipeTableCell", for: indexPath) as UITableViewCell
+        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
+        cell.textLabel?.text = savedRecipeToArray[indexPath.row].titulo
 
-        let rcpes = RecipesArray()
-        let rcpesArray = rcpes.loadFromFile(nameOfPathComponent: "RecetaDelDia")
-        //print(rcpesArray)
-        cell.textLabel?.text = rcpesArray[indexPath.row].titulo
-            //recipes_Array.recipesArray[indexPath.row].titulo
-        
         return cell
     }
-    
-    
-    
+
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRow(at: indexPath)
-        let rcpes = RecipesArray()
-        let rcpesArray = rcpes.loadFromFile(nameOfPathComponent: "RecetaDelDia")
-        pressedRecipee_ = rcpesArray[indexPath.row]
+        let cell = tableView.cellForRow(at: indexPath) 
+        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
+        pressedRecipee_ = savedRecipeToArray[indexPath.row]
         performSegue(withIdentifier: "savedRecipeView", sender: cell)
-        //print(pressedRecipee_)
 
     }
-    
-    
     
 }
 
