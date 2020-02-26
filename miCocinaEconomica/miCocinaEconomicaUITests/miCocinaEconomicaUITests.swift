@@ -7,36 +7,81 @@
 //
 
 import XCTest
+@testable import miCocinaEconomica
 
 class miCocinaEconomicaUITests: XCTestCase {
 
+    var app: XCUIApplication!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // UI tests must launch the application that they test.
+    func testOfMainFlow() {
+
         let app = XCUIApplication()
         app.launch()
+        
+        let isDisplayingOnboarding = app.otherElements["FirstView"]
+        let recipeDayImageView = app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 0).children(matching: .other).element(boundBy: 0).children(matching: .image).element
+        
+        XCTAssertTrue(recipeDayImageView.exists)
+        XCTAssertTrue(isDisplayingOnboarding.exists)
+        
+        if recipeDayImageView.isSelected{
+            let isDisplayDishViewController = app.otherElements["SecondView"]
+            XCTAssertTrue(isDisplayDishViewController.exists)
+            XCTAssertTrue(recipeDayImageView.exists)
+            XCTAssertTrue(isDisplayingOnboarding.exists)
+            
+            XCTAssertFalse(recipeDayImageView.exists)
+            XCTAssertFalse(isDisplayingOnboarding.exists)
+        }
+        
+        let navigationBarsQuery = app.navigationBars
+        
+        if recipeDayImageView.isSelected{
+            
+            let saveButton = navigationBarsQuery.buttons["Guardar Receta"]
+            XCTAssertTrue(saveButton.exists)
+            let saveAlert = app.alerts["Felicidades"].scrollViews.otherElements.buttons["OK"]
+            XCTAssertFalse(saveAlert.exists)
+        }
+        
+        let recipesViewController = app.otherElements["ThirdView"]
+        let tablesQuery = app.tables
 
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let tabBarsQuery = app.tabBars
+        if tabBarsQuery.buttons["Mis Recetas"].isSelected {
+            XCTAssertTrue(recipesViewController.exists)
+            XCTAssertNotNil( tablesQuery.children(matching: .cell).element(boundBy: 0))
+        }
+                
+        tabBarsQuery.buttons["Menú Del Día"].tap()
+        let elementLottie = app.otherElements["FirstView"].children(matching: .other).element(boundBy: 1)
+        if  tabBarsQuery.buttons["Menú Del Día"].isSelected{
+            XCTAssertTrue(recipeDayImageView.exists)
+            XCTAssertTrue(isDisplayingOnboarding.exists)
+            XCTAssertTrue(elementLottie.exists)
+        }
+        
+        if tabBarsQuery.buttons["Mi Despensa"].isSelected{
+            let navButton = navigationBarsQuery.buttons["Seleccionar Ingredientes"]
+            XCTAssertTrue(navButton.isEnabled)
+        }
+        
     }
 
     func testLaunchPerformance() {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
             measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
+                        XCUIApplication().launch()
             }
         }
     }

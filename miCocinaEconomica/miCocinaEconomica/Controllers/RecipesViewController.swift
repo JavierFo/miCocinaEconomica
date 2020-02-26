@@ -21,6 +21,8 @@ class RecipesViewController: UITableViewController {
     var generalArray_ : [Recipe] = []
     
     override func viewDidLoad() {
+        view.accessibilityIdentifier = "ThirdView"
+
     }
     
     override func viewWillDisappear(_ animated: Bool) {

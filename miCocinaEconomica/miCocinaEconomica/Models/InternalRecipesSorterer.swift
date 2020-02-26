@@ -33,10 +33,7 @@ class InternalRecipesSorterer {
            recipesArray.savetoFileStringArray(nameOfPathComponent: "productsList", objectToEncode: productsName)
            
          }
-       
-        //let recipesArray = RecipesArray()
-        //var productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
-        
+               
         switch ingredientsSort {
             
                 case .Alitas: break

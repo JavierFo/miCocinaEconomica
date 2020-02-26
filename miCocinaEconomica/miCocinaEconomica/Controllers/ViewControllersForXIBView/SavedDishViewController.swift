@@ -16,6 +16,9 @@ class SavedDishViewController: UIViewController{
     var pressedName : String?
     
     override func viewDidLoad() {
+        
+        view.accessibilityIdentifier = "FourthView"
+
         var listaIngredientesFinal : String = ""
 
                dishView.dishTitleLabel.adjustsFontSizeToFitWidth = true

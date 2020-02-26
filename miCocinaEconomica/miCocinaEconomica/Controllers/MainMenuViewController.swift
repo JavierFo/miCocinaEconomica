@@ -30,7 +30,7 @@ class MainMenuViewController: UIViewController {
     
      override func viewDidLoad() {
             super.viewDidLoad()
-
+        view.accessibilityIdentifier = "FirstView"
         //weak var delegate: DataModelDelegate?
         dayMenuImage.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector (self.sendToMenusTableView(sender:)))

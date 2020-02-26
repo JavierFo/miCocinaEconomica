@@ -22,7 +22,7 @@ class DishViewController: UIViewController {
     weak var delegate: DataModelDelegate?
     
     override func viewDidLoad() {
-
+        view.accessibilityIdentifier = "SecondView"
         saveRecipe.isEnabled = true
         var listaIngredientesFinal : String = ""
         FirebaseRecipe.getNameForJSONRecipe { (nameDish) in
@@ -54,10 +54,10 @@ class DishViewController: UIViewController {
         
         let recipes_Array = RecipesArray()
         //let loadedRecipe = loadFromFile(nameOfPathComponent: "RecetaDelDia")
-        let rcpes = RecipesArray()
-        let rcpesArray = rcpes.loadFromFile(nameOfPathComponent: "RecipeArray")
+        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
+
         for recipeA in recipes_Array.recipesArray {
-            for recipeB in rcpesArray {
+            for recipeB in savedRecipeToArray {
                 if recipeA.titulo == recipeB.titulo {
                     saveRecipe.isEnabled = false
                 }
