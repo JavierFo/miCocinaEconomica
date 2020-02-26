@@ -23,6 +23,7 @@ class IngredientsViewController: UIViewController{
     
     
     var buttonCounterFromTable : [Int]?
+    
     @IBAction func unwindToMainIngredientsDish(_ unwindSegue: UIStoryboardSegue) {
         
     }
@@ -30,11 +31,15 @@ class IngredientsViewController: UIViewController{
     override func viewWillAppear(_ animated: Bool) {
         view.backgroundColor = .white
         
+        //addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
+
+       // if selectIngredientsButton.action
+        
         if let buttonCounterFromTable_ = buttonCounterFromTable {
             if buttonCounterFromTable_.isEmpty == true  {
                 
-                selectIngredientsButton.tintColor = .clear
-                selectIngredientsButton.customView?.isHidden = true
+                //selectIngredientsButton.tintColor = .clear
+                //selectIngredientsButton.customView?.isHidden = true
                 view.backgroundColor = .white
                 selectedDishCollectionView.backgroundView?.backgroundColor = .white
                 
@@ -53,16 +58,17 @@ class IngredientsViewController: UIViewController{
                 
             }
         }
-        
-        print(buttonCounterFromTable)
-        
  
+    }
+    
+    func buttonTapped() {
+
     }
     
     override func viewDidLoad() {
         
-        selectIngredientsButton.tintColor = .clear
-        selectIngredientsButton.customView?.isHidden = true
+        //selectIngredientsButton.tintColor = .clear
+        //selectIngredientsButton.customView?.isHidden = true
         view.backgroundColor = .white
         selectedDishCollectionView.backgroundView?.backgroundColor = .white
         
