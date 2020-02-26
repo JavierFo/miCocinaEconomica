@@ -19,6 +19,8 @@
 		10108DF1240352E9009CC532 /* SavedDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DF0240352E9009CC532 /* SavedDishViewController.swift */; };
 		1054A67624051E7D003E4E16 /* GeneralArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054A67524051E7D003E4E16 /* GeneralArray.swift */; };
 		1054A67824052101003E4E16 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054A67724052101003E4E16 /* FileManager.swift */; };
+		107BD69E2406976D0002CEA5 /* avocado.json in Resources */ = {isa = PBXBuildFile; fileRef = 107BD69D2406976D0002CEA5 /* avocado.json */; };
+		107BD6A0240697820002CEA5 /* lettuce.json in Resources */ = {isa = PBXBuildFile; fileRef = 107BD69F240697820002CEA5 /* lettuce.json */; };
 		108C15AE23FFCB2C004891B2 /* MxMarketsAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */; };
 		109552FC2400ABF800101469 /* FirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109552FB2400ABF800101469 /* FirebaseStorage.swift */; };
 		109552FE2400D8FF00101469 /* 2605-cooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 109552FD2400D8FF00101469 /* 2605-cooking.json */; };
@@ -84,6 +86,8 @@
 		10108DF0240352E9009CC532 /* SavedDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDishViewController.swift; sourceTree = "<group>"; };
 		1054A67524051E7D003E4E16 /* GeneralArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralArray.swift; sourceTree = "<group>"; };
 		1054A67724052101003E4E16 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		107BD69D2406976D0002CEA5 /* avocado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = avocado.json; path = ../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/avocado.json; sourceTree = "<group>"; };
+		107BD69F240697820002CEA5 /* lettuce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lettuce.json; path = ../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/lettuce.json; sourceTree = "<group>"; };
 		108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxMarketsAPISession.swift; sourceTree = "<group>"; };
 		109552FB2400ABF800101469 /* FirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorage.swift; sourceTree = "<group>"; };
 		109552FD2400D8FF00101469 /* 2605-cooking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "2605-cooking.json"; path = "../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/2605-cooking.json"; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 		108C15A623FF8DA8004891B2 /* JSONLotties */ = {
 			isa = PBXGroup;
 			children = (
+				107BD69F240697820002CEA5 /* lettuce.json */,
+				107BD69D2406976D0002CEA5 /* avocado.json */,
 				109552FD2400D8FF00101469 /* 2605-cooking.json */,
 			);
 			path = JSONLotties;
@@ -435,11 +441,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				100FFC6323F90A0F00ABB1FF /* LaunchScreen.storyboard in Resources */,
+				107BD69E2406976D0002CEA5 /* avocado.json in Resources */,
 				109552FE2400D8FF00101469 /* 2605-cooking.json in Resources */,
 				10D312DE2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib in Resources */,
 				10E350E82402756400D0B83D /* DishView.xib in Resources */,
 				109553002400D90F00101469 /* GoogleService-Info.plist in Resources */,
 				100FFC6023F90A0F00ABB1FF /* Assets.xcassets in Resources */,
+				107BD6A0240697820002CEA5 /* lettuce.json in Resources */,
 				100FFC5E23F90A0F00ABB1FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

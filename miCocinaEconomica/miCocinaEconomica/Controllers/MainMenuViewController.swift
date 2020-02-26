@@ -11,10 +11,6 @@ import Lottie
 import FirebaseStorage
 import SDWebImage
 
-//protocol DataModelDelegate: class {
-//    func didRecieveDataUpdate(data: Recipe)
-//}
-
 class MainMenuViewController: UIViewController {
     
     @IBOutlet weak var animationArea: UIView!
@@ -31,7 +27,6 @@ class MainMenuViewController: UIViewController {
      override func viewDidLoad() {
             super.viewDidLoad()
         view.accessibilityIdentifier = "FirstView"
-        //weak var delegate: DataModelDelegate?
         dayMenuImage.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector (self.sendToMenusTableView(sender:)))
         tapGestureRecognizer.numberOfTouchesRequired = 1
@@ -49,7 +44,7 @@ class MainMenuViewController: UIViewController {
         animationView.frame = animationArea.frame
         animationView.center = animationArea.center
         animationView.contentMode = .scaleAspectFill
-        view.backgroundColor = .none
+        view.backgroundColor = .white
         view.addSubview(animationView)
         animationView.loopMode = .loop
         animationView.play()

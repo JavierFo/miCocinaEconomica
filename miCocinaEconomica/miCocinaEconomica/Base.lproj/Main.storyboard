@@ -46,7 +46,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tjZ-CF-MuN">
                                         <rect key="frame" x="20" y="381" width="374" height="150"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De nuestra Cocina:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LW1-Xh-8Ii">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🍌🧀🌮🥗🥑🍗🍅🌽🌶" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LW1-Xh-8Ii">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="21.5"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -191,6 +191,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Busca Platillos "/>
                                         <connections>
+                                            <action selector="dishSearchButton:" destination="zBv-KL-Ggx" eventType="touchUpInside" id="x5j-Bx-l9J"/>
                                             <segue destination="qFu-hb-gaY" kind="unwind" unwindAction="unwindToMainIngredientsDish:" id="ANT-ch-38J"/>
                                         </connections>
                                     </button>
@@ -263,21 +264,45 @@
                                     <outlet property="delegate" destination="elw-lg-xtr" id="d9T-nO-tgC"/>
                                 </connections>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yWL-BP-ICU" userLabel="avocadoView">
+                                <rect key="frame" x="20" y="248" width="374" height="399"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muestranos Que Hay En Tu Despensa! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHS-ZD-2kE">
+                                <rect key="frame" x="20" y="647" width="374" height="80"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" constant="20" id="1cN-b8-B38"/>
+                            <constraint firstItem="yWL-BP-ICU" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" constant="20" id="4O3-Z3-T6S"/>
+                            <constraint firstItem="HkX-8H-vOi" firstAttribute="bottom" secondItem="yWL-BP-ICU" secondAttribute="bottom" constant="166" id="6z1-vW-6cm"/>
+                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" constant="20" id="AZD-Es-7kc"/>
+                            <constraint firstItem="HkX-8H-vOi" firstAttribute="trailing" secondItem="yWL-BP-ICU" secondAttribute="trailing" constant="20" id="C15-QA-O6O"/>
+                            <constraint firstItem="HkX-8H-vOi" firstAttribute="bottom" secondItem="QHS-ZD-2kE" secondAttribute="bottom" constant="86" id="KA9-Bg-1xE"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" id="LFx-tt-03L"/>
+                            <constraint firstItem="HkX-8H-vOi" firstAttribute="trailing" secondItem="QHS-ZD-2kE" secondAttribute="trailing" constant="20" id="PNv-NL-NiK"/>
+                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="centerX" secondItem="HkX-8H-vOi" secondAttribute="centerX" id="QXU-qf-RWa"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="top" secondItem="HkX-8H-vOi" secondAttribute="top" id="SH7-8D-u7i"/>
                             <constraint firstItem="D5h-eM-8eP" firstAttribute="top" secondItem="hB9-z2-DW9" secondAttribute="bottom" id="Sjo-sw-tNQ"/>
+                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="top" secondItem="HkX-8H-vOi" secondAttribute="top" constant="603" id="b0H-Pc-r3c"/>
                             <constraint firstItem="D5h-eM-8eP" firstAttribute="bottom" secondItem="HkX-8H-vOi" secondAttribute="bottom" id="cE1-Nk-uwl"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="centerX" secondItem="7xa-gQ-UAB" secondAttribute="centerX" id="csJ-Wn-wjl"/>
+                            <constraint firstItem="yWL-BP-ICU" firstAttribute="centerX" secondItem="HkX-8H-vOi" secondAttribute="centerX" id="hWf-av-WM8"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="leading" secondItem="D5h-eM-8eP" secondAttribute="leading" id="r9b-xL-kXA"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="trailing" secondItem="D5h-eM-8eP" secondAttribute="trailing" id="rYq-M7-zzo"/>
+                            <constraint firstItem="yWL-BP-ICU" firstAttribute="top" secondItem="HkX-8H-vOi" secondAttribute="top" constant="204" id="ywq-cG-oEA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HkX-8H-vOi"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Mi Despensa" image="Refrigerator46" id="dxQ-Ud-LSa"/>
                     <connections>
+                        <outlet property="avocadoView" destination="yWL-BP-ICU" id="zxC-7Z-tSn"/>
+                        <outlet property="messageLabel" destination="QHS-ZD-2kE" id="9He-Zn-e4Z"/>
+                        <outlet property="selectIngredientsButton" destination="nxA-0o-74W" id="sKf-WS-vcr"/>
                         <outlet property="selectedDishCollectionView" destination="D5h-eM-8eP" id="zvs-sY-hMS"/>
                         <segue destination="yi7-CN-qq2" kind="presentation" identifier="RecipeForIngredientsSegue" modalPresentationStyle="fullScreen" id="OwP-72-FVw"/>
                     </connections>
@@ -413,7 +438,7 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir Receta" id="1H9-pB-xAf">
                                             <connections>
-                                                <action selector="AddRecipe:" destination="zIJ-6g-kdJ" id="9o1-w6-iac"/>
+                                                <action selector="AddRecipe:" destination="zIJ-6g-kdJ" id="XFA-Ev-3Yq"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -438,9 +463,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eyl-eC-p14"/>
                     </view>
-                    <connections>
-                        <segue destination="u7d-cc-RxG" kind="presentation" identifier="CalendarRecipesSegue" id="M1B-jd-zH2"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7h-A1-wti" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="ZwJ-JR-5cV" userLabel="Exit" sceneMemberID="exit"/>
@@ -470,6 +492,7 @@
                             <outlet property="delegate" destination="u7d-cc-RxG" id="4FF-8f-dE5"/>
                         </connections>
                     </tableView>
+                    <modalPageSheetSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ojo-zr-mU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -509,6 +532,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iNY-9c-oOh"/>
                     </view>
+                    <connections>
+                        <segue destination="u7d-cc-RxG" kind="presentation" identifier="recipeToCalendarTableCell" id="KDb-Xa-nyc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vka-TB-rc3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

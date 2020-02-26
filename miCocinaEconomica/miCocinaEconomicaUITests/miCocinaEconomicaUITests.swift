@@ -60,7 +60,7 @@ class miCocinaEconomicaUITests: XCTestCase {
         let tabBarsQuery = app.tabBars
         if tabBarsQuery.buttons["Mis Recetas"].isSelected {
             XCTAssertTrue(recipesViewController.exists)
-            XCTAssertNotNil( tablesQuery.children(matching: .cell).element(boundBy: 0))
+            XCTAssertNotNil(tablesQuery.children(matching: .cell).element(boundBy: 0))
         }
                 
         tabBarsQuery.buttons["Menú Del Día"].tap()

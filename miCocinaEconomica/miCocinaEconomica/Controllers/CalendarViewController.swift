@@ -41,6 +41,21 @@ class CalendarViewController: DayViewController {
        reloadData()
      }
 
+    lazy var slideInTransitioningDelegate = SlideInPresentationManager()
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let controller = segue.destination as? RecipesTableViewController {
+          if segue.identifier == "recipeToCalendarTableCell" {
+           slideInTransitioningDelegate.direction = .right
+          }
+          slideInTransitioningDelegate.disableCompactHeight = false
+          controller.transitioningDelegate = slideInTransitioningDelegate
+          controller.modalPresentationStyle = .custom
+        }
+        
+    }
+    
      @objc func changeStyle() {
 
        navigationItem.rightBarButtonItem!.title = title
@@ -54,11 +69,11 @@ class CalendarViewController: DayViewController {
        let dayComponent = calendar.component(.day, from: date)
        let zone = calendar.timeZone
 
-       let newComponents = DateComponents(timeZone: zone,
+        let newComponents = DateComponents(timeZone: zone,
                                           year: yearComponent,
                                           month: monthComponent,
                                           day: dayComponent)
-       let returnValue = calendar.date(from: newComponents)
+        let returnValue = calendar.date(from: newComponents)
 
        return returnValue!
      }
@@ -95,6 +110,7 @@ class CalendarViewController: DayViewController {
 
      override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
        endEventEditing()
+       performSegue(withIdentifier: "recipeToCalendarTableCell", sender: self)
        print("Did Tap at date: \(date)")
             
      }

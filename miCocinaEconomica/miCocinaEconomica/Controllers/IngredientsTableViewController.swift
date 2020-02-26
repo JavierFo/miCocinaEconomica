@@ -8,15 +8,26 @@
 
 import UIKit
 
+protocol IngredientsPassed: class {
+    func didRecieveDataUpdate(data: [Int])
+}
+
 class IngredientsTableViewController: UITableViewController {
     
     var JSONList = MxMarketsAPISession()
     var checkmark : Bool = false
     var buttonCounter = [Int]()
+    weak var delegate: IngredientsPassed?
     
     override func viewDidLoad() {
         tableView.reloadData()
     }
+    
+    @IBAction func dishSearchButton(_ sender: UIButton) {
+        
+        delegate?.didRecieveDataUpdate(data: buttonCounter)
+    }
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -85,7 +96,7 @@ class IngredientsTableViewController: UITableViewController {
             buttonCounter.append(indexPath.row)
             tableView.reloadRows(at: [indexPath], with: .right)
         }
-        print(buttonCounter)
+        //print(buttonCounter)
   
     }
 
