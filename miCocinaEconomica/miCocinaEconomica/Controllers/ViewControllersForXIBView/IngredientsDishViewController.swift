@@ -9,7 +9,6 @@
 import UIKit
 
 class IngredientsDishViewController: UIViewController{
-    var FirebaseRecipe = FirebaseStorage()
 
     @IBOutlet weak var dishView: DishView!
                

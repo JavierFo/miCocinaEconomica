@@ -71,13 +71,6 @@ class DishViewController: UIViewController {
         let savedRecipeToArray = loadRecipeFromFile(nameOfPathComponent: "RecipeArrayBridge")
         showAlert(withTitleAndMessage: "Felicidades", message: "Receta Guardada")
         appendRecipesIntoArray(withRecipe: savedRecipeToArray)
-        //print(savedRecipeToArray)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
-        print(savedRecipeToArray)
-        
     }
     
     func showAlert(withTitleAndMessage title:String, message:String) {

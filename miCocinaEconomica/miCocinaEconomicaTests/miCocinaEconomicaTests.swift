@@ -109,7 +109,7 @@ class miCocinaEconomicaTests: XCTestCase {
             promise.fulfill()
           }
           dataTask.resume()
-          wait(for: [promise], timeout: 5)
+          wait(for: [promise], timeout: 20)
 
           XCTAssertNil(responseError)
           XCTAssertEqual(statusCode, 200)

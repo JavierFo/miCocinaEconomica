@@ -77,15 +77,7 @@ class IngredientsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        //let recipesArray = RecipesArray()
-        //var productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
-        
-        if cell?.textLabel?.text == "Aguacate Hass" {
-            
-        }
-        
+        //let cell = tableView.cellForRow(at: indexPath)
         
         if buttonCounter.contains(indexPath.row){
             let index = buttonCounter.firstIndex(of: indexPath.row)
@@ -96,7 +88,6 @@ class IngredientsTableViewController: UITableViewController {
             buttonCounter.append(indexPath.row)
             tableView.reloadRows(at: [indexPath], with: .right)
         }
-        //print(buttonCounter)
   
     }
 

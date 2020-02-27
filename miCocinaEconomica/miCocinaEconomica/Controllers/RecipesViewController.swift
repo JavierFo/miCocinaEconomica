@@ -16,9 +16,7 @@ class RecipesViewController: UITableViewController {
     @IBAction func unwindToCalendarRecipes2(_ unwindSegue: UIStoryboardSegue) {
     }
     
-    var pressedRecipe : String = ""
     var pressedRecipee_ : Recipe?
-    var generalArray_ : [Recipe] = []
     
     override func viewDidLoad() {
         view.accessibilityIdentifier = "ThirdView"

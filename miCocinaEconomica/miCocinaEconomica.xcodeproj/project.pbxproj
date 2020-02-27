@@ -238,7 +238,6 @@
 				10955303240143A200101469 /* IngredientDetails.swift */,
 				10E350E524021F7900D0B83D /* Recipe.swift */,
 				10D312E02403F16400A1CF50 /* InternalRecipesSorterer.swift */,
-				10108DEE2403270E009CC532 /* RecipesArray.swift */,
 				1054A67524051E7D003E4E16 /* GeneralArray.swift */,
 			);
 			path = Models;
@@ -285,6 +284,7 @@
 				108C15A623FF8DA8004891B2 /* JSONLotties */,
 				10C6D9F023FC193600F8778A /* Presentation */,
 				1054A67724052101003E4E16 /* FileManager.swift */,
+				10108DEE2403270E009CC532 /* RecipesArray.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";

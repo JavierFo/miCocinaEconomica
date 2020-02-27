@@ -11,7 +11,6 @@ import Foundation
 class RecipesArray : Codable{
     
     var recipesArray : [Recipe] = []
-    var generalArray : [Recipe] = []
     
     func savetoFile(nameOfPathComponent path : String, objectToEncode object: Recipe){
         

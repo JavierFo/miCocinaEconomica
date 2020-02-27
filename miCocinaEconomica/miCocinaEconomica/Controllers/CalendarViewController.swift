@@ -105,13 +105,13 @@ class CalendarViewController: DayViewController {
        endEventEditing()
        //print("Event has been longPressed: \(descriptor) \(String(describing: descriptor.userInfo))")
        beginEditing(event: descriptor, animated: true)
-       print(Date())
+       //print(Date())
      }
 
      override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
        endEventEditing()
        performSegue(withIdentifier: "recipeToCalendarTableCell", sender: self)
-       print("Did Tap at date: \(date)")
+       //print("Did Tap at date: \(date)")
             
      }
 

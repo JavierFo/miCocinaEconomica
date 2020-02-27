@@ -19,6 +19,7 @@ class IngredientsViewController: UIViewController{
     let animationLettuceView = AnimationView(name: "lettuce")
     @IBOutlet weak var avocadoView: UIView!
     @IBOutlet weak var selectIngredientsButton: UIBarButtonItem!
+    
     @IBOutlet weak var messageLabel: UILabel!
     
     
@@ -29,17 +30,7 @@ class IngredientsViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        view.backgroundColor = .white
         
-        //addTarget(self, action: "buttonTapped", forControlEvents: .TouchUpInside)
-
-       // if selectIngredientsButton.action
-        
-        if let buttonCounterFromTable_ = buttonCounterFromTable {
-            if buttonCounterFromTable_.isEmpty == true  {
-                
-                //selectIngredientsButton.tintColor = .clear
-                //selectIngredientsButton.customView?.isHidden = true
                 view.backgroundColor = .white
                 selectedDishCollectionView.backgroundView?.backgroundColor = .white
                 
@@ -51,13 +42,6 @@ class IngredientsViewController: UIViewController{
                 animationLettuceView.play()
                 
                 messageLabel.text = "Oops! Parece que aun no encontramos una receta para ti..."
-    
-            }else if buttonCounterFromTable_.isEmpty == false{
-                
-                messageLabel.text = "Buscando Receta..."
-                
-            }
-        }
  
     }
     
@@ -67,8 +51,6 @@ class IngredientsViewController: UIViewController{
     
     override func viewDidLoad() {
         
-        //selectIngredientsButton.tintColor = .clear
-        //selectIngredientsButton.customView?.isHidden = true
         view.backgroundColor = .white
         selectedDishCollectionView.backgroundView?.backgroundColor = .white
         
