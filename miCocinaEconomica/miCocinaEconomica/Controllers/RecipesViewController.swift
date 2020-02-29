@@ -10,6 +10,8 @@ import UIKit
 
 class RecipesViewController: UITableViewController {
     
+    var savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
+    
     @IBAction func unwindToCalendarRecipes(_ unwindSegue: UIStoryboardSegue) {
     }
     
@@ -41,14 +43,13 @@ class RecipesViewController: UITableViewController {
 extension RecipesViewController{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
         return savedRecipeToArray.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recipeTableCell", for: indexPath)
-        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
         cell.textLabel?.text = savedRecipeToArray[indexPath.row].titulo
+        cell.showsReorderControl = true
 
         return cell
     }
@@ -56,10 +57,22 @@ extension RecipesViewController{
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let cell = tableView.cellForRow(at: indexPath) 
-        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
         pressedRecipee_ = savedRecipeToArray[indexPath.row]
         performSegue(withIdentifier: "savedRecipeView", sender: cell)
 
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            savedRecipeToArray.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
     }
     
 }

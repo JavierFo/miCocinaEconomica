@@ -70,12 +70,12 @@ class DishViewController: UIViewController {
         
         let savedRecipeToArray = loadRecipeFromFile(nameOfPathComponent: "RecipeArrayBridge")
         let savedArrayOfRecipes = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
-        
         let recipeTitle = savedArrayOfRecipes.filter({ $0.titulo == savedRecipeToArray.titulo })
+        
         if recipeTitle.isEmpty {
         
-        showAlert(withTitleAndMessage: "Felicidades", message: "Receta Guardada")
-        appendRecipesIntoArray(withRecipe: savedRecipeToArray)
+            showAlert(withTitleAndMessage: "Felicidades", message: "Receta Guardada")
+            appendRecipesIntoArray(withRecipe: savedRecipeToArray)
             
         }else{
             
