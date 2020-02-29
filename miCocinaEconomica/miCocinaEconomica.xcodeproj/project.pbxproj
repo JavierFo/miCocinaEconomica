@@ -17,7 +17,6 @@
 		100FFC7923F90A1000ABB1FF /* miCocinaEconomicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */; };
 		10108DEF2403270E009CC532 /* RecipesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DEE2403270E009CC532 /* RecipesArray.swift */; };
 		10108DF1240352E9009CC532 /* SavedDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DF0240352E9009CC532 /* SavedDishViewController.swift */; };
-		1054A67624051E7D003E4E16 /* GeneralArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054A67524051E7D003E4E16 /* GeneralArray.swift */; };
 		1054A67824052101003E4E16 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054A67724052101003E4E16 /* FileManager.swift */; };
 		107BD69E2406976D0002CEA5 /* avocado.json in Resources */ = {isa = PBXBuildFile; fileRef = 107BD69D2406976D0002CEA5 /* avocado.json */; };
 		107BD6A0240697820002CEA5 /* lettuce.json in Resources */ = {isa = PBXBuildFile; fileRef = 107BD69F240697820002CEA5 /* lettuce.json */; };
@@ -84,7 +83,6 @@
 		100FFC7A23F90A1000ABB1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10108DEE2403270E009CC532 /* RecipesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesArray.swift; sourceTree = "<group>"; };
 		10108DF0240352E9009CC532 /* SavedDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDishViewController.swift; sourceTree = "<group>"; };
-		1054A67524051E7D003E4E16 /* GeneralArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralArray.swift; sourceTree = "<group>"; };
 		1054A67724052101003E4E16 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		107BD69D2406976D0002CEA5 /* avocado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = avocado.json; path = ../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/avocado.json; sourceTree = "<group>"; };
 		107BD69F240697820002CEA5 /* lettuce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lettuce.json; path = ../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/lettuce.json; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				10955303240143A200101469 /* IngredientDetails.swift */,
 				10E350E524021F7900D0B83D /* Recipe.swift */,
 				10D312E02403F16400A1CF50 /* InternalRecipesSorterer.swift */,
-				1054A67524051E7D003E4E16 /* GeneralArray.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -580,7 +577,6 @@
 				10F21E682403932900D45565 /* IngredientsDishViewController.swift in Sources */,
 				10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */,
 				10C8D7F223FE3ABA00BFFB96 /* CalendarViewController.swift in Sources */,
-				1054A67624051E7D003E4E16 /* GeneralArray.swift in Sources */,
 				10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */,
 				10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */,
 				100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */,

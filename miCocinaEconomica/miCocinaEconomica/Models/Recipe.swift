@@ -8,6 +8,8 @@
 
 import Foundation
 
+var generalArray : [Recipe] = []
+
 struct Recipe : Codable {
     var foto_url : String = ""
     var ingredientes : [String] = [""]

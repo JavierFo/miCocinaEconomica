@@ -277,23 +277,21 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" constant="20" id="1cN-b8-B38"/>
                             <constraint firstItem="yWL-BP-ICU" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" constant="20" id="4O3-Z3-T6S"/>
                             <constraint firstItem="HkX-8H-vOi" firstAttribute="bottom" secondItem="yWL-BP-ICU" secondAttribute="bottom" constant="166" id="6z1-vW-6cm"/>
-                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" constant="20" id="AZD-Es-7kc"/>
                             <constraint firstItem="HkX-8H-vOi" firstAttribute="trailing" secondItem="yWL-BP-ICU" secondAttribute="trailing" constant="20" id="C15-QA-O6O"/>
-                            <constraint firstItem="HkX-8H-vOi" firstAttribute="bottom" secondItem="QHS-ZD-2kE" secondAttribute="bottom" constant="86" id="KA9-Bg-1xE"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="leading" secondItem="HkX-8H-vOi" secondAttribute="leading" id="LFx-tt-03L"/>
-                            <constraint firstItem="HkX-8H-vOi" firstAttribute="trailing" secondItem="QHS-ZD-2kE" secondAttribute="trailing" constant="20" id="PNv-NL-NiK"/>
-                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="centerX" secondItem="HkX-8H-vOi" secondAttribute="centerX" id="QXU-qf-RWa"/>
+                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="trailing" secondItem="yWL-BP-ICU" secondAttribute="trailing" id="S0v-QQ-Lsk"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="top" secondItem="HkX-8H-vOi" secondAttribute="top" id="SH7-8D-u7i"/>
                             <constraint firstItem="D5h-eM-8eP" firstAttribute="top" secondItem="hB9-z2-DW9" secondAttribute="bottom" id="Sjo-sw-tNQ"/>
-                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="top" secondItem="HkX-8H-vOi" secondAttribute="top" constant="603" id="b0H-Pc-r3c"/>
                             <constraint firstItem="D5h-eM-8eP" firstAttribute="bottom" secondItem="HkX-8H-vOi" secondAttribute="bottom" id="cE1-Nk-uwl"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="centerX" secondItem="7xa-gQ-UAB" secondAttribute="centerX" id="csJ-Wn-wjl"/>
                             <constraint firstItem="yWL-BP-ICU" firstAttribute="centerX" secondItem="HkX-8H-vOi" secondAttribute="centerX" id="hWf-av-WM8"/>
+                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="top" secondItem="yWL-BP-ICU" secondAttribute="bottom" id="mpn-q4-y1b"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="leading" secondItem="D5h-eM-8eP" secondAttribute="leading" id="r9b-xL-kXA"/>
                             <constraint firstItem="hB9-z2-DW9" firstAttribute="trailing" secondItem="D5h-eM-8eP" secondAttribute="trailing" id="rYq-M7-zzo"/>
+                            <constraint firstItem="QHS-ZD-2kE" firstAttribute="leading" secondItem="yWL-BP-ICU" secondAttribute="leading" id="trv-WT-mI2"/>
+                            <constraint firstItem="HkX-8H-vOi" firstAttribute="bottom" secondItem="QHS-ZD-2kE" secondAttribute="bottom" constant="86" id="u6d-Qw-h3G"/>
                             <constraint firstItem="yWL-BP-ICU" firstAttribute="top" secondItem="HkX-8H-vOi" secondAttribute="top" constant="204" id="ywq-cG-oEA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HkX-8H-vOi"/>

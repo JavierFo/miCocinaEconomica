@@ -12,39 +12,6 @@ class RecipesArray : Codable{
     
     var recipesArray : [Recipe] = []
     
-    func savetoFile(nameOfPathComponent path : String, objectToEncode object: Recipe){
-        
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let recipesURL = documentsDirectory.appendingPathComponent(path).appendingPathExtension("plist")
-        
-        let propertyListEncoder = PropertyListEncoder()
-        
-        recipesArray.append(object)
-
-            let recipeToEncode = try? propertyListEncoder.encode(recipesArray)
-            try? recipeToEncode?.write(to: recipesURL, options: .noFileProtection)
-    }
-
-    func loadFromFile(nameOfPathComponent path : String) -> [Recipe]{
-        
-        var decodedRecipe_ : [Recipe]?
-        var finalRecipeArray : [Recipe]?
-        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let recipesURL = documentsDirectory.appendingPathComponent(path).appendingPathExtension("plist")
-        
-        let propertyListDecoder = PropertyListDecoder()
-        if let retrievedRecipe = try? Data(contentsOf: recipesURL), let decodedRecipe = try? propertyListDecoder.decode([Recipe].self, from: retrievedRecipe){
-            decodedRecipe_ = decodedRecipe
-        }
-        
-        if let decodedRecipeFinal = decodedRecipe_ {
-            finalRecipeArray = decodedRecipeFinal
-        }
-
-        return finalRecipeArray ?? []
-        
-    }
-    
     func savetoFileStringArray(nameOfPathComponent path : String, objectToEncode object: [String]){
         
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
