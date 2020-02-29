@@ -10,6 +10,8 @@ import UIKit
 
 class RecipesViewController: UITableViewController {
     
+    @IBOutlet weak var editTablesbTN: UIButton!
+        
     var savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
     
     @IBAction func unwindToCalendarRecipes(_ unwindSegue: UIStoryboardSegue) {
@@ -31,7 +33,13 @@ class RecipesViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
-   
+    
+    @IBAction func editTablesButton(_ sender: UIButton) {
+        
+        let tableViewEditingMode = tableView.isEditing
+        tableView.setEditing(!tableViewEditingMode, animated: true)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "savedRecipeView"{ 
             let pressedRecipe_ = segue.destination as! SavedDishViewController
@@ -41,6 +49,8 @@ class RecipesViewController: UITableViewController {
 }
 
 extension RecipesViewController{
+    
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedRecipeToArray.count

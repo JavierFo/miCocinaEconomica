@@ -321,6 +321,16 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
+                                <barButtonItem style="plain" id="8ze-Vj-HIq">
+                                    <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mhn-jY-frG">
+                                        <rect key="frame" x="20" y="7" width="40" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Editar"/>
+                                        <connections>
+                                            <action selector="editTablesButton:" destination="4qY-It-DT7" eventType="touchUpInside" id="gC5-ds-0cB"/>
+                                        </connections>
+                                    </button>
+                                </barButtonItem>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="JP4-JN-Rk6"/>
                                 <barButtonItem title="Mi Recetario Semanal" style="plain" id="dxL-uk-R1y">
                                     <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="roC-Jj-c31">
@@ -360,6 +370,7 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Mis Recetas" image="Book46" id="c0B-ra-vgk"/>
                     <connections>
+                        <outlet property="editTablesbTN" destination="mhn-jY-frG" id="0Lu-xo-laL"/>
                         <segue destination="mG2-YA-6vk" kind="presentation" identifier="savedRecipeView" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="4zI-5x-Mfx"/>
                     </connections>
                 </tableViewController>
