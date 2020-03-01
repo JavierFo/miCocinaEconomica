@@ -8,23 +8,18 @@
 
 import UIKit
 
-protocol DataModelDelegate: class {
-    func didRecieveDataUpdate(data: [Recipe])
-}
-
 class DishViewController: UIViewController {
-
-    var recipe_ : Recipe?
+        
     @IBOutlet weak var dishView: DishView!
     @IBOutlet weak var saveRecipe: UIBarButtonItem!
     
     var FirebaseRecipe = FirebaseStorage()
-    weak var delegate: DataModelDelegate?
-    
+        
     override func viewDidLoad() {
         view.accessibilityIdentifier = "SecondView"
         saveRecipe.isEnabled = true
         var listaIngredientesFinal : String = ""
+        
         FirebaseRecipe.getNameForJSONRecipe { (nameDish) in
             self.FirebaseRecipe.getRecipesJSON(forDish: nameDish) { (Recipe) in
                 
@@ -52,36 +47,24 @@ class DishViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         
-        let recipes_Array = RecipesArray()
-        //let loadedRecipe = loadFromFile(nameOfPathComponent: "RecetaDelDia")
-        let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
-
-        for recipeA in recipes_Array.recipesArray {
-            for recipeB in savedRecipeToArray {
-                if recipeA.titulo == recipeB.titulo {
-                    saveRecipe.isEnabled = false
-                }
-            }
-        }
-        
     }
     
     @IBAction func saveRecipe(_ sender: UIBarButtonItem) {
         
         let savedRecipeToArray = loadRecipeFromFile(nameOfPathComponent: "RecipeArrayBridge")
-        let savedArrayOfRecipes = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
-        let recipeTitle = savedArrayOfRecipes.filter({ $0.titulo == savedRecipeToArray.titulo })
-        
-        if recipeTitle.isEmpty {
-        
-            showAlert(withTitleAndMessage: "Felicidades", message: "Receta Guardada")
-            appendRecipesIntoArray(withRecipe: savedRecipeToArray)
+        let editedRecipefromArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
+        let recipeTitle = editedRecipefromArray.filter({ $0.titulo == savedRecipeToArray.titulo })
+
+            if recipeTitle.isEmpty {
             
-        }else{
-            
-            showAlert(withTitleAndMessage: "Wow", message: "Parece que ya Guardaste esta Receta!")
-            
-        }
+                showAlert(withTitleAndMessage: "Felicidades", message: "Receta Guardada")
+                appendRecipesIntoArray(withRecipe: savedRecipeToArray)
+                
+            }else{
+                
+                showAlert(withTitleAndMessage: "Wow", message: "Parece que ya Guardaste esta Receta!")
+                
+            }
             
     }
     
@@ -94,4 +77,6 @@ class DishViewController: UIViewController {
     }
     
 }
+
+
 

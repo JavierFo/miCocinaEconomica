@@ -13,7 +13,7 @@ class RecipesViewController: UITableViewController {
     @IBOutlet weak var editTablesbTN: UIButton!
         
     var savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
-    
+        
     @IBAction func unwindToCalendarRecipes(_ unwindSegue: UIStoryboardSegue) {
     }
     
@@ -28,9 +28,11 @@ class RecipesViewController: UITableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        saveArrayOfRecipeToFile(nameOfPathComponent: "savedArrayofRecipes", objectToEncode: savedRecipeToArray)
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
         tableView.reloadData()
     }
     
@@ -49,9 +51,7 @@ class RecipesViewController: UITableViewController {
 }
 
 extension RecipesViewController{
-    
-    
-    
+
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedRecipeToArray.count
     }
