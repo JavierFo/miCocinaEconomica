@@ -1,0 +1,6 @@
+framework module Pods_miCocinaEconomica_miCocinaEconomicaUITests {
+  umbrella header "Pods-miCocinaEconomica-miCocinaEconomicaUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
