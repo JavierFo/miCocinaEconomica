@@ -10,24 +10,20 @@ import UIKit
 import CalendarKit
 import DateToolsSwift
 
-class CalendarViewController: DayViewController {
+class CalendarViewController: DayViewController, selectedRecipesFromModalTableView {
+    
+    var recipeFromTable_ : Recipe?
+    
+    func sendDataToCalendarViewController(recipe: Recipe) {
+        self.recipeFromTable_ = recipe
+    }
     
     var generatedEvents = [EventDescriptor]()
     var alreadyGeneratedSet = Set<Date>()
-    
-    var recipeFromTable = RecipesTableViewController()
-    var recipeFromTable_ : Recipe?
+        
     var passedRecipe : [Recipe] = []
     
-    lazy var data : [String] = {
-        var title_ : [String] = [""]
-        
-        if let title = self.recipeFromTable_?.titulo {
-            title_ = [title]
-        }
-        
-        return title_
-    }()
+    var data : [String] = []
     
     var colors = [UIColor.lightGray]
 
@@ -44,6 +40,10 @@ class CalendarViewController: DayViewController {
        view = dayView
      }
 
+    override func viewWillAppear(_ animated: Bool) {
+        data.append(recipeFromTable_?.titulo ?? "")
+    }
+    
      override func viewDidLoad() {
        super.viewDidLoad()
        navigationController?.navigationBar.isTranslucent = false
@@ -57,7 +57,8 @@ class CalendarViewController: DayViewController {
         
         if let controller = segue.destination as? RecipesTableViewController {
           if segue.identifier == "recipeToCalendarTableCell" {
-           slideInTransitioningDelegate.direction = .right
+            controller.recipeDelegate = self
+            slideInTransitioningDelegate.direction = .right
           }
           slideInTransitioningDelegate.disableCompactHeight = false
           controller.transitioningDelegate = slideInTransitioningDelegate
@@ -113,10 +114,13 @@ class CalendarViewController: DayViewController {
 
      override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
        endEventEditing()
-        print(recipeFromTable.passRecipe)
-        print(data)
-        print(recipeFromTable_?.titulo)
-        print(passedRecipe)
+        let event = generateEventNearDate(date)
+        print("Creating a new event")
+        create(event: event, animated: true)
+        createdEvent = event
+        print(recipeFromTable_)
+//        print(recipeFromTable_?.titulo)
+//        print(passedRecipe)
        //print("Did Tap at date: \(date)")
             
      }
@@ -136,16 +140,14 @@ class CalendarViewController: DayViewController {
      override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
        //print("Did long press timeline at date \(date)")
        performSegue(withIdentifier: "recipeToCalendarTableCell", sender: self)
-
-       //present(RecipesTableViewController(), animated: true, completion: nil)
-//        let presentedVC = RecipesTableViewController()
-//        presentedVC.passedRecipeDelegate = self
-//        present(presentedVC, animated: true, completion: nil)
        endEventEditing()
-//        let event = generateEventNearDate(date)
-//        print("Creating a new event")
-//        create(event: event, animated: true)
-//        createdEvent = event
+        
+        if data.count > 0{
+            let event = generateEventNearDate(date)
+            print("Creating a new event")
+            create(event: event, animated: true)
+            createdEvent = event
+        }
      }
 
      override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {

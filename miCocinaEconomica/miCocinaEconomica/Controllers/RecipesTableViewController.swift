@@ -8,8 +8,13 @@
 
 import UIKit
 
+protocol selectedRecipesFromModalTableView{
+    func sendDataToCalendarViewController(recipe: Recipe)
+}
+
 class RecipesTableViewController: UITableViewController {
     
+    var recipeDelegate: selectedRecipesFromModalTableView? = nil
     let savedRecipeToArray = loadFromAppendedArrayofRecipes(nameOfPathComponent: "savedArrayofRecipes")
     var passRecipe : Recipe = Recipe(foto_url: "", ingredientes: [""], porciones: 0, preparacion: "", titulo: "")
     
@@ -29,20 +34,14 @@ class RecipesTableViewController: UITableViewController {
             //let cell = tableView.cellForRow(at: indexPath)
             //performSegue(withIdentifier: "savedRecipeView", sender: cell)
             passRecipe = savedRecipeToArray[indexPath.row]
-
-            if let passingRecipe = presentedViewController as? CalendarViewController {
-                passingRecipe.recipeFromTable_ = savedRecipeToArray[indexPath.row]
+            
+            if self.recipeDelegate != nil {
+                let selectedRecipe = self.passRecipe
+                self.recipeDelegate?.sendDataToCalendarViewController(recipe: selectedRecipe)
+//                print(passRecipe)
+//                print(selectedRecipe)
+                dismiss(animated: true, completion: nil)
             }
-            
-            if let p = presentingViewController as? CalendarViewController {
-                p.passedRecipe.append(passRecipe)
-            }
-            
-            let pasandoRecipe = CalendarViewController()
-            pasandoRecipe.data.append(savedRecipeToArray[indexPath.row].titulo)
-            
-            print(passRecipe)
-            //dismiss(animated: true, completion: nil)
         }
     
 }

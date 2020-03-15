@@ -49,8 +49,7 @@ class IngredientsViewController: UIViewController{
 
     }
     
-    override func viewDidLoad() {
-        
+    override func viewDidAppear(_ animated: Bool) {
         view.backgroundColor = .white
         selectedDishCollectionView.backgroundView?.backgroundColor = .white
         
@@ -60,6 +59,9 @@ class IngredientsViewController: UIViewController{
         view.addSubview(animationAvocadoView)
         animationAvocadoView.loopMode = .loop
         animationAvocadoView.play()
+    }
+    
+    override func viewDidLoad() {
         
         let nib = UINib(nibName: String(describing: selectedDishCollectionViewCell.self), bundle: nil)
         selectedDishCollectionView.register(nib, forCellWithReuseIdentifier: selectedDishCollectionViewCell.identifier)
