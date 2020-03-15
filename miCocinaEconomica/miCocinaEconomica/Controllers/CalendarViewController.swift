@@ -12,16 +12,26 @@ import DateToolsSwift
 
 class CalendarViewController: DayViewController {
     
-     var generatedEvents = [EventDescriptor]()
-     var alreadyGeneratedSet = Set<Date>()
+    var generatedEvents = [EventDescriptor]()
+    var alreadyGeneratedSet = Set<Date>()
     
-    var data = [["Wololo",
-                 "Pk, gs"],
-    ]
+    var recipeFromTable = RecipesTableViewController()
+    var recipeFromTable_ : Recipe?
+    var passedRecipe : [Recipe] = []
     
-     var colors = [UIColor.lightGray]
+    lazy var data : [String] = {
+        var title_ : [String] = [""]
+        
+        if let title = self.recipeFromTable_?.titulo {
+            title_ = [title]
+        }
+        
+        return title_
+    }()
+    
+    var colors = [UIColor.lightGray]
 
-     lazy var customCalendar: Calendar = {
+    lazy var customCalendar: Calendar = {
         let customNSCalendar = NSCalendar(identifier: NSCalendar.Identifier.gregorian)!
        customNSCalendar.timeZone = TimeZone(abbreviation: "CST")!
        let calendar = customNSCalendar as Calendar
@@ -103,6 +113,10 @@ class CalendarViewController: DayViewController {
 
      override func dayView(dayView: DayView, didTapTimelineAt date: Date) {
        endEventEditing()
+        print(recipeFromTable.passRecipe)
+        print(data)
+        print(recipeFromTable_?.titulo)
+        print(passedRecipe)
        //print("Did Tap at date: \(date)")
             
      }
@@ -121,12 +135,17 @@ class CalendarViewController: DayViewController {
 
      override func dayView(dayView: DayView, didLongPressTimelineAt date: Date) {
        //print("Did long press timeline at date \(date)")
-       //performSegue(withIdentifier: "recipeToCalendarTableCell", sender: self)
+       performSegue(withIdentifier: "recipeToCalendarTableCell", sender: self)
+
+       //present(RecipesTableViewController(), animated: true, completion: nil)
+//        let presentedVC = RecipesTableViewController()
+//        presentedVC.passedRecipeDelegate = self
+//        present(presentedVC, animated: true, completion: nil)
        endEventEditing()
-        let event = generateEventNearDate(date)
-        print("Creating a new event")
-        create(event: event, animated: true)
-        createdEvent = event
+//        let event = generateEventNearDate(date)
+//        print("Creating a new event")
+//        create(event: event, animated: true)
+//        createdEvent = event
      }
 
      override func dayView(dayView: DayView, didUpdate event: EventDescriptor) {
@@ -154,43 +173,43 @@ class CalendarViewController: DayViewController {
                                   chunk: TimeChunk.dateComponents(minutes: duration))
       event.startDate = datePeriod.beginning!
       event.endDate = datePeriod.end!
-      
+
       var info = data[Int(arc4random_uniform(UInt32(data.count)))]
       let timezone = dayView.calendar.timeZone
       info.append(datePeriod.beginning!.format(with: "dd.MM.YYYY", timeZone: timezone))
       info.append("\(datePeriod.beginning!.format(with: "HH:mm", timeZone: timezone)) - \(datePeriod.end!.format(with: "HH:mm", timeZone: timezone))")
-      event.text = info.reduce("", {$0 + $1 + "\n"})
+      //event.text = info.reduce("", {$0 + $1 + "\n"})
       event.color = colors[Int(arc4random_uniform(UInt32(colors.count)))]
       event.editedEvent = event
-      
+
       return event
     }
     
     private func generateEventsForDate(_ date: Date) -> [EventDescriptor] {
       var workingDate = date.add(TimeChunk.dateComponents(hours: Int(arc4random_uniform(10) + 5)))
       var events = [Event]()
-      
+
       for i in 0...4 {
         let event = Event()
         let duration = Int(arc4random_uniform(160) + 60)
         let datePeriod = TimePeriod(beginning: workingDate,
                                     chunk: TimeChunk.dateComponents(minutes: duration))
-        
+
         event.startDate = datePeriod.beginning!
         event.endDate = datePeriod.end!
-        
+
         var info = data[Int(arc4random_uniform(UInt32(data.count)))]
-        
+
         let timezone = dayView.calendar.timeZone
         print(timezone)
         info.append(datePeriod.beginning!.format(with: "dd.MM.YYYY", timeZone: timezone))
         info.append("\(datePeriod.beginning!.format(with: "HH:mm", timeZone: timezone)) - \(datePeriod.end!.format(with: "HH:mm", timeZone: timezone))")
-        event.text = info.reduce("", {$0 + $1 + "\n"})
+        //event.text = info.reduce("", {$0 + $1 + "\n"})
         event.color = colors[Int(arc4random_uniform(UInt32(colors.count)))]
         event.isAllDay = Int(arc4random_uniform(2)) % 2 == 0
-        
+
         events.append(event)
-        
+
         let nextOffset = Int(arc4random_uniform(250) + 40)
         workingDate = workingDate.add(TimeChunk.dateComponents(minutes: nextOffset))
         event.userInfo = String(i)
@@ -201,3 +220,4 @@ class CalendarViewController: DayViewController {
     }
     
 }
+

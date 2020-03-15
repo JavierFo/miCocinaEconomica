@@ -29,14 +29,14 @@ class SavedDishViewController: UIViewController{
                dishView.dishPhotoImageView.sd_setImage(with: image_url as URL?)
                //dishView.dishPortionsLabel.text = "Porciones: " + String(recipe_?.porciones)
                dishView.dishTitleLabel.text = recipe_?.titulo
-               self.dishView.preparationTextView.text = (recipe_?.preparacion ?? "") + "."
+               dishView.preparationTextView.text = (recipe_?.preparacion ?? "") + "."
 
                for ingredient in recipe_?.ingredientes ?? [] {
                    listaIngredientesFinal.append(ingredient + ". ")
                }
-               self.dishView.ingredientsTextView.text = listaIngredientesFinal
+                dishView.ingredientsTextView.text = listaIngredientesFinal
 
-               dishView.dishPriceLabel.text = "Precio: $"
+                dishView.dishPriceLabel.text = "Precio: $"
     }
     
     override func viewDidAppear(_ animated: Bool) {

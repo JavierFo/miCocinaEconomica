@@ -15,8 +15,8 @@ class IngredientsViewController: UIViewController{
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
     var FirebaseRecipe = FirebaseStorage()
     @IBOutlet weak var selectedDishCollectionView: UICollectionView!
-    let animationAvocadoView = AnimationView(name: "avocado")
-    let animationLettuceView = AnimationView(name: "lettuce")
+    let animationAvocadoView = AnimationView(name: "6118-artishow")
+    //let animationLettuceView = AnimationView(name: "lettuce")
     @IBOutlet weak var avocadoView: UIView!
     @IBOutlet weak var selectIngredientsButton: UIBarButtonItem!
     
@@ -31,15 +31,15 @@ class IngredientsViewController: UIViewController{
     
     override func viewWillAppear(_ animated: Bool) {
         
-                view.backgroundColor = .white
-                selectedDishCollectionView.backgroundView?.backgroundColor = .white
-                
-                animationLettuceView.frame = avocadoView.frame
-                animationLettuceView.center = avocadoView.center
-                animationLettuceView.contentMode = .scaleAspectFit
-                view.addSubview(animationLettuceView)
-                animationLettuceView.loopMode = .loop
-                animationLettuceView.play()
+//                view.backgroundColor = .white
+//                selectedDishCollectionView.backgroundView?.backgroundColor = .white
+//
+//                animationLettuceView.frame = avocadoView.frame
+//                animationLettuceView.center = avocadoView.center
+//                animationLettuceView.contentMode = .scaleAspectFit
+//                view.addSubview(animationLettuceView)
+//                animationLettuceView.loopMode = .loop
+//                animationLettuceView.play()
                 
                 messageLabel.text = "Oops! Parece que aun no encontramos una receta para ti..."
  

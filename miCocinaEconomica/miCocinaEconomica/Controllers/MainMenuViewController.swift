@@ -21,7 +21,7 @@ class MainMenuViewController: UIViewController {
     var FirebaseRecipe = FirebaseStorage()
     
     override func viewWillAppear(_ animated: Bool) {
-        
+
     }
     
      override func viewDidLoad() {
@@ -38,6 +38,7 @@ class MainMenuViewController: UIViewController {
                 self.dayMenuImage.sd_setImage(with: image_url as URL?)
             }
         }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

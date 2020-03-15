@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1000B34B241DE07B000694CB /* 4685-avocad-bros.json in Resources */ = {isa = PBXBuildFile; fileRef = 1000B34A241DE07A000694CB /* 4685-avocad-bros.json */; };
+		1000B34D241DE13C000694CB /* 6118-artishow.json in Resources */ = {isa = PBXBuildFile; fileRef = 1000B34C241DE13C000694CB /* 6118-artishow.json */; };
+		1000B34F241DE158000694CB /* 2605-cooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 1000B34E241DE158000694CB /* 2605-cooking.json */; };
 		100FFC5723F90A0F00ABB1FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC5623F90A0F00ABB1FF /* AppDelegate.swift */; };
 		100FFC5923F90A0F00ABB1FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC5823F90A0F00ABB1FF /* SceneDelegate.swift */; };
 		100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC5A23F90A0F00ABB1FF /* TabBarController.swift */; };
@@ -65,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1000B34A241DE07A000694CB /* 4685-avocad-bros.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "4685-avocad-bros.json"; path = "../../../../../Downloads/4685-avocad-bros.json"; sourceTree = "<group>"; };
+		1000B34C241DE13C000694CB /* 6118-artishow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "6118-artishow.json"; path = "../../../../../Downloads/6118-artishow.json"; sourceTree = "<group>"; };
+		1000B34E241DE158000694CB /* 2605-cooking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "2605-cooking.json"; path = "../../../../../Downloads/2605-cooking.json"; sourceTree = "<group>"; };
 		100FFC5323F90A0F00ABB1FF /* miCocinaEconomica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miCocinaEconomica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		100FFC5623F90A0F00ABB1FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		100FFC5823F90A0F00ABB1FF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,9 +88,6 @@
 		10108DEE2403270E009CC532 /* RecipesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesArray.swift; sourceTree = "<group>"; };
 		10108DF0240352E9009CC532 /* SavedDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDishViewController.swift; sourceTree = "<group>"; };
 		10518975241DCEF900B2FB46 /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
-		10518977241DCF0A00B2FB46 /* 2605-cooking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "2605-cooking.json"; sourceTree = "<group>"; };
-		10518978241DCF0A00B2FB46 /* avocado.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = avocado.json; sourceTree = "<group>"; };
-		10518979241DCF0A00B2FB46 /* lettuce.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lettuce.json; sourceTree = "<group>"; };
 		1051897A241DCF3300B2FB46 /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		1051897C241DCF8400B2FB46 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		1054A67724052101003E4E16 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
@@ -267,9 +270,9 @@
 		10C6D9EF23FC190B00F8778A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				10518979241DCF0A00B2FB46 /* lettuce.json */,
-				10518978241DCF0A00B2FB46 /* avocado.json */,
-				10518977241DCF0A00B2FB46 /* 2605-cooking.json */,
+				1000B34C241DE13C000694CB /* 6118-artishow.json */,
+				1000B34A241DE07A000694CB /* 4685-avocad-bros.json */,
+				1000B34E241DE158000694CB /* 2605-cooking.json */,
 				1054A67724052101003E4E16 /* FileManager.swift */,
 				10108DEE2403270E009CC532 /* RecipesArray.swift */,
 				10C1B981241120C600485D25 /* TimeChunk+DateComponents.swift */,
@@ -420,11 +423,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1000B34F241DE158000694CB /* 2605-cooking.json in Resources */,
+				1000B34D241DE13C000694CB /* 6118-artishow.json in Resources */,
 				100FFC6323F90A0F00ABB1FF /* LaunchScreen.storyboard in Resources */,
 				10D312DE2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib in Resources */,
 				10E350E82402756400D0B83D /* DishView.xib in Resources */,
 				109553002400D90F00101469 /* GoogleService-Info.plist in Resources */,
 				100FFC6023F90A0F00ABB1FF /* Assets.xcassets in Resources */,
+				1000B34B241DE07B000694CB /* 4685-avocad-bros.json in Resources */,
 				100FFC5E23F90A0F00ABB1FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

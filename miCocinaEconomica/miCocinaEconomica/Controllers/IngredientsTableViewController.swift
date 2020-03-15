@@ -43,13 +43,7 @@ class IngredientsTableViewController: UITableViewController {
           }
             
         let recipesArray = RecipesArray()
-        var productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
-        productsNameArray.append("Arroz")
-        productsNameArray.append("Frijol")
-        productsNameArray.append("Carne")
-        productsNameArray.append("Pollo")
-        productsNameArray.append("Mole")
-        productsNameArray.append("Tortillas")
+        let productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
         
         return productsNameArray.count
      }
@@ -57,13 +51,7 @@ class IngredientsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ingredientsCell", for: indexPath)
         let recipesArray = RecipesArray()
-        var productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
-        productsNameArray.append("Arroz")
-        productsNameArray.append("Frijol")
-        productsNameArray.append("Carne")
-        productsNameArray.append("Pollo")
-        productsNameArray.append("Mole")
-        productsNameArray.append("Tortillas")
+        let productsNameArray = recipesArray.loadFromFileStringArray(nameOfPathComponent: "productsList")
         
         if buttonCounter.contains(indexPath.row){
             cell.accessoryType = .checkmark
