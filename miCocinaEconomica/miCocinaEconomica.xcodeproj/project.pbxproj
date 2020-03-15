@@ -17,19 +17,16 @@
 		100FFC7923F90A1000ABB1FF /* miCocinaEconomicaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 100FFC7823F90A1000ABB1FF /* miCocinaEconomicaUITests.swift */; };
 		10108DEF2403270E009CC532 /* RecipesArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DEE2403270E009CC532 /* RecipesArray.swift */; };
 		10108DF1240352E9009CC532 /* SavedDishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10108DF0240352E9009CC532 /* SavedDishViewController.swift */; };
+		10518976241DCEF900B2FB46 /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10518975241DCEF900B2FB46 /* SlideInPresentationAnimator.swift */; };
+		1051897B241DCF3300B2FB46 /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051897A241DCF3300B2FB46 /* SlideInPresentationManager.swift */; };
+		1051897D241DCF8400B2FB46 /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1051897C241DCF8400B2FB46 /* SlideInPresentationController.swift */; };
 		1054A67824052101003E4E16 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1054A67724052101003E4E16 /* FileManager.swift */; };
-		107BD69E2406976D0002CEA5 /* avocado.json in Resources */ = {isa = PBXBuildFile; fileRef = 107BD69D2406976D0002CEA5 /* avocado.json */; };
-		107BD6A0240697820002CEA5 /* lettuce.json in Resources */ = {isa = PBXBuildFile; fileRef = 107BD69F240697820002CEA5 /* lettuce.json */; };
 		108C15AE23FFCB2C004891B2 /* MxMarketsAPISession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */; };
 		109552FC2400ABF800101469 /* FirebaseStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 109552FB2400ABF800101469 /* FirebaseStorage.swift */; };
-		109552FE2400D8FF00101469 /* 2605-cooking.json in Resources */ = {isa = PBXBuildFile; fileRef = 109552FD2400D8FF00101469 /* 2605-cooking.json */; };
 		109553002400D90F00101469 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 109552FF2400D90F00101469 /* GoogleService-Info.plist */; };
 		1095530224011E0000101469 /* IngredientsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1095530124011E0000101469 /* IngredientsList.swift */; };
 		10955304240143A200101469 /* IngredientDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10955303240143A200101469 /* IngredientDetails.swift */; };
 		10C1B982241120C600485D25 /* TimeChunk+DateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C1B981241120C600485D25 /* TimeChunk+DateComponents.swift */; };
-		10C6D9F423FC193600F8778A /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */; };
-		10C6D9F523FC193600F8778A /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */; };
-		10C6D9F623FC193700F8778A /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */; };
 		10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F723FC1A5200F8778A /* IngredientsTableViewController.swift */; };
 		10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */; };
 		10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */; };
@@ -84,19 +81,19 @@
 		100FFC7A23F90A1000ABB1FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10108DEE2403270E009CC532 /* RecipesArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesArray.swift; sourceTree = "<group>"; };
 		10108DF0240352E9009CC532 /* SavedDishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDishViewController.swift; sourceTree = "<group>"; };
+		10518975241DCEF900B2FB46 /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
+		10518977241DCF0A00B2FB46 /* 2605-cooking.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "2605-cooking.json"; sourceTree = "<group>"; };
+		10518978241DCF0A00B2FB46 /* avocado.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = avocado.json; sourceTree = "<group>"; };
+		10518979241DCF0A00B2FB46 /* lettuce.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = lettuce.json; sourceTree = "<group>"; };
+		1051897A241DCF3300B2FB46 /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
+		1051897C241DCF8400B2FB46 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		1054A67724052101003E4E16 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
-		107BD69D2406976D0002CEA5 /* avocado.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = avocado.json; path = ../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/avocado.json; sourceTree = "<group>"; };
-		107BD69F240697820002CEA5 /* lettuce.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = lettuce.json; path = ../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/lettuce.json; sourceTree = "<group>"; };
 		108C15AD23FFCB2C004891B2 /* MxMarketsAPISession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MxMarketsAPISession.swift; sourceTree = "<group>"; };
 		109552FB2400ABF800101469 /* FirebaseStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseStorage.swift; sourceTree = "<group>"; };
-		109552FD2400D8FF00101469 /* 2605-cooking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "2605-cooking.json"; path = "../../../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/2605-cooking.json"; sourceTree = "<group>"; };
 		109552FF2400D90F00101469 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Documents/DiploAppsiOS/ArchivosAppDiplo_MiCocinaEconomica/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1095530124011E0000101469 /* IngredientsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsList.swift; sourceTree = "<group>"; };
 		10955303240143A200101469 /* IngredientDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientDetails.swift; sourceTree = "<group>"; };
 		10C1B981241120C600485D25 /* TimeChunk+DateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeChunk+DateComponents.swift"; sourceTree = "<group>"; };
-		10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
-		10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
-		10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		10C6D9F723FC1A5200F8778A /* IngredientsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewController.swift; sourceTree = "<group>"; };
 		10C6D9F923FC1A6700F8778A /* IngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsViewController.swift; sourceTree = "<group>"; };
 		10C6D9FB23FC1A7900F8778A /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
@@ -221,16 +218,6 @@
 			path = ViewControllersForXIBView;
 			sourceTree = "<group>";
 		};
-		108C15A623FF8DA8004891B2 /* JSONLotties */ = {
-			isa = PBXGroup;
-			children = (
-				107BD69F240697820002CEA5 /* lettuce.json */,
-				107BD69D2406976D0002CEA5 /* avocado.json */,
-				109552FD2400D8FF00101469 /* 2605-cooking.json */,
-			);
-			path = JSONLotties;
-			sourceTree = "<group>";
-		};
 		10C6D9EB23FB67DE00F8778A /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,24 +267,17 @@
 		10C6D9EF23FC190B00F8778A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				108C15A623FF8DA8004891B2 /* JSONLotties */,
-				10C6D9F023FC193600F8778A /* Presentation */,
+				10518979241DCF0A00B2FB46 /* lettuce.json */,
+				10518978241DCF0A00B2FB46 /* avocado.json */,
+				10518977241DCF0A00B2FB46 /* 2605-cooking.json */,
 				1054A67724052101003E4E16 /* FileManager.swift */,
 				10108DEE2403270E009CC532 /* RecipesArray.swift */,
 				10C1B981241120C600485D25 /* TimeChunk+DateComponents.swift */,
+				10518975241DCEF900B2FB46 /* SlideInPresentationAnimator.swift */,
+				1051897A241DCF3300B2FB46 /* SlideInPresentationManager.swift */,
+				1051897C241DCF8400B2FB46 /* SlideInPresentationController.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		10C6D9F023FC193600F8778A /* Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				10C6D9F123FC193600F8778A /* SlideInPresentationAnimator.swift */,
-				10C6D9F223FC193600F8778A /* SlideInPresentationManager.swift */,
-				10C6D9F323FC193600F8778A /* SlideInPresentationController.swift */,
-			);
-			name = Presentation;
-			path = "../../../../../Downloads/Materials/MedalCount Completed/MedalCount/Presentation";
 			sourceTree = "<group>";
 		};
 		10D312DF2403F08400A1CF50 /* DataSourceFirebase */ = {
@@ -441,13 +421,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				100FFC6323F90A0F00ABB1FF /* LaunchScreen.storyboard in Resources */,
-				107BD69E2406976D0002CEA5 /* avocado.json in Resources */,
-				109552FE2400D8FF00101469 /* 2605-cooking.json in Resources */,
 				10D312DE2403DE5800A1CF50 /* selectedDishCollectionViewCell.xib in Resources */,
 				10E350E82402756400D0B83D /* DishView.xib in Resources */,
 				109553002400D90F00101469 /* GoogleService-Info.plist in Resources */,
 				100FFC6023F90A0F00ABB1FF /* Assets.xcassets in Resources */,
-				107BD6A0240697820002CEA5 /* lettuce.json in Resources */,
 				100FFC5E23F90A0F00ABB1FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,11 +553,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10C6D9F523FC193600F8778A /* SlideInPresentationManager.swift in Sources */,
 				10F21E682403932900D45565 /* IngredientsDishViewController.swift in Sources */,
 				10C6D9FC23FC1A7900F8778A /* RecipesViewController.swift in Sources */,
 				10C8D7F223FE3ABA00BFFB96 /* CalendarViewController.swift in Sources */,
 				10F5647D23FCBB440028F856 /* MainMenuViewController.swift in Sources */,
+				1051897B241DCF3300B2FB46 /* SlideInPresentationManager.swift in Sources */,
 				10C6D9F823FC1A5200F8778A /* IngredientsTableViewController.swift in Sources */,
 				100FFC5B23F90A0F00ABB1FF /* TabBarController.swift in Sources */,
 				10D312E12403F16400A1CF50 /* InternalRecipesSorterer.swift in Sources */,
@@ -589,7 +566,6 @@
 				10E350E624021F7900D0B83D /* Recipe.swift in Sources */,
 				10C6D9FE23FC1A8E00F8778A /* RecipesTableViewController.swift in Sources */,
 				1095530224011E0000101469 /* IngredientsList.swift in Sources */,
-				10C6D9F423FC193600F8778A /* SlideInPresentationAnimator.swift in Sources */,
 				1054A67824052101003E4E16 /* FileManager.swift in Sources */,
 				100FFC5723F90A0F00ABB1FF /* AppDelegate.swift in Sources */,
 				109552FC2400ABF800101469 /* FirebaseStorage.swift in Sources */,
@@ -597,8 +573,9 @@
 				10108DEF2403270E009CC532 /* RecipesArray.swift in Sources */,
 				10E350EE24028BDF00D0B83D /* DishViewController.swift in Sources */,
 				10955304240143A200101469 /* IngredientDetails.swift in Sources */,
+				10518976241DCEF900B2FB46 /* SlideInPresentationAnimator.swift in Sources */,
 				10C6D9FA23FC1A6700F8778A /* IngredientsViewController.swift in Sources */,
-				10C6D9F623FC193700F8778A /* SlideInPresentationController.swift in Sources */,
+				1051897D241DCF8400B2FB46 /* SlideInPresentationController.swift in Sources */,
 				100FFC5923F90A0F00ABB1FF /* SceneDelegate.swift in Sources */,
 				10E350EC24027E5C00D0B83D /* DishView.swift in Sources */,
 				10D312DD2403DE5800A1CF50 /* selectedDishCollectionViewCell.swift in Sources */,
